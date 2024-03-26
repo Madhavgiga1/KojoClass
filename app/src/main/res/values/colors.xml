@@ -7,4 +7,35 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="mistyighter">#c8d8e4</color>
+    <color name="CoffeePot">#A49393</color>
+    <color name="Cream">#F6EEE0</color>
+    <color name="lightpeach">#E4B7A0</color>
+    <color name="PEACH">#C38370</color>
+    <color name="GunmetalGray">#738580</color>
+    <color name="Pewter">#B9B7BD</color>
+    <color name="ScallopSeashell">#E7D2CC</color>
+    <color name="Greyish">#D3D3D3</color>
+    <color name="CadetBlue">#004445</color>
+    <color name="AutumnFoliage">#763626</color>
+    <color name="dark">#313C44</color>
+    <color name="lightviolet">#543c52</color>
+    <color name="lightpeachypinkorange">#E05C55</color>
+    <color name="darkviolet">#361d32</color>
+    <color name="BalticSeabgcolor">#28242c</color>
+    <color name="anotherbgcolor">#A95A575F</color>
+    <color name="purplishbg">#C0B7D5</color>
+    <color name="whitishyellow">#FAF1ECDD</color>
+    <color name="backgroundwhitishbg">#fef9f8</color>
+    <color name="greenishbg">#172B33</color>
+    <color name="anothergoodinputcolor">#FAF0EEE8</color>
+    <color name="purplish">#CEC8D0</color>
+    <color name="darkgreygreen">#BD52524C</color>
+    <color name="BUTTONBLUE">#4A5592</color>
+    <color name="glightGray">#F9F9F9</color>
+    <color name="mainactivitybg">#272537</color>
+    <color name="lightsalmon">#FFA07A</color>
+    <color name="coral">#FF7F50</color>
+    <color name="darkorange">#FF8C00</color>
 </resources>
