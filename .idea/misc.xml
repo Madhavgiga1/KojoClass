@@ -5,11 +5,16 @@
       <map>
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/rec_round_bg.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/redblue_gradient.xml" value="0.35208333333333336" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/rounded_bottom_rectangle.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/activity_main.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/ass_row_layout.xml" value="0.3061594202898551" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/fragment_assignment.xml" value="0.3061594202898551" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/fragment_auth_home.xml" value="0.18795289855072464" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/fragment_home.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/fragment_notes.xml" value="0.4" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/fragment_sign_up.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/fragment_signin.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/notes_row_layout.xml" value="0.3061594202898551" />
       </map>
     </option>
   </component>

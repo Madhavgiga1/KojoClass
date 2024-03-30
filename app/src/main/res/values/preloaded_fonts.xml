@@ -2,7 +2,13 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alatsi</item>
+        <item>@font/anton</item>
         <item>@font/baloo_paaji_2_extrabold</item>
+        <item>@font/bowlby_one</item>
+        <item>@font/bungee</item>
         <item>@font/bungee_inline</item>
+        <item>@font/fredoka_one</item>
+        <item>@font/luckiest_guy</item>
+        <item>@font/rammetto_one</item>
     </array>
 </resources>
