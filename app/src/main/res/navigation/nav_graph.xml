@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/authHomeFragment">
+    app:startDestination="@id/quizFragment">
 
     <fragment
         android:id="@+id/authHomeFragment"
@@ -26,4 +26,9 @@
         android:name="com.example.reater.ui.fragments.SigninFragment"
         android:label="fragment_signin"
         tools:layout="@layout/fragment_signin" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.reater.ui.fragments.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
 </navigation>

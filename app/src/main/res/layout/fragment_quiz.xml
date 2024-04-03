@@ -1,64 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark"
-    tools:context=".ui.fragments.AssignmentFragment">
+    tools:context=".ui.fragments.QuizFragment">
 
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView3"
+        android:id="@+id/materialCardView4"
         android:layout_width="409dp"
-
         android:layout_height="100dp"
-        app:cardBackgroundColor="#363239"
+        app:cardBackgroundColor="@color/BalticSeabgcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CardViewShape">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/Assignment_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="Assignments"
-                android:textColor="@color/Cream"
-                android:textSize="30sp"
-                app:fontFamily="@font/rammetto_one"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="@+id/imageView7"
-                app:layout_constraintVertical_bias="0.517" />
-
             <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="24dp"
-                android:src="@drawable/corrective_12091668"
+                android:id="@+id/imageView5"
+                android:layout_width="160dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/quizicon"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
     <HorizontalScrollView
-        android:id="@+id/assignment_horizontalScrollView"
+        android:id="@+id/quiz_horizontalScrollView"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -66,7 +50,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/upcoming_assign_card"
+                android:id="@+id/uq_card"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
@@ -80,7 +64,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/ua_icon"
+                        android:id="@+id/uq_icon"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="16dp"
@@ -90,27 +74,27 @@
                         app:srcCompat="@drawable/future" />
 
                     <TextView
-                        android:id="@+id/ua_text"
+                        android:id="@+id/uq_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="5dp"
                         android:fontFamily="@font/anton"
                         android:gravity="center"
-                        android:text="Upcoming .."
+                        android:text="Upcoming Quizzes"
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
 
-                        app:layout_constraintStart_toEndOf="@+id/ua_icon"
+                        app:layout_constraintStart_toEndOf="@+id/uq_icon"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.375" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/pa_card"
+                android:id="@+id/pq_card"
                 android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
@@ -124,37 +108,43 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/pa_icon"
+                        android:id="@+id/pq_icon"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginStart="4dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/past" />
 
                     <TextView
-                        android:id="@+id/pa_text"
+                        android:id="@+id/pq_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="2dp"
                         android:fontFamily="@font/anton"
                         android:gravity="center"
-                        android:text="Past Assignments"
+                        android:text="Past Quizzes"
                         android:textColor="@color/BalticSeabgcolor"
                         android:textSize="25sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="0.153"
 
-                        app:layout_constraintStart_toEndOf="@+id/pa_icon"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.25" />
+                        app:layout_constraintStart_toEndOf="@+id/pq_icon"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </HorizontalScrollView>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="559dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_horizontalScrollView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
