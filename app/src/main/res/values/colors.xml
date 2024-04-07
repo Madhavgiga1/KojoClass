@@ -38,4 +38,15 @@
     <color name="lightsalmon">#FFA07A</color>
     <color name="coral">#FF7F50</color>
     <color name="darkorange">#FF8C00</color>
+
+    <color name="Slightdarkorange">#ff723b</color>
+    <color name="slightgrey">#91a2b4</color>
+    <color name="maybecyant">#cbeadc</color>
+
+
+    <color name="goodhwite">#FOFOFO</color>
+    <color name="brightgreen">#8AE98D</color>
+    <color name="mixred">#FC574E</color>
+
+
 </resources>
