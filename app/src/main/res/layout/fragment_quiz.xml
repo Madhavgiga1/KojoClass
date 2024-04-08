@@ -4,49 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark"
+    android:background="@color/glightGray"
     tools:context=".ui.fragments.QuizFragment">
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView4"
-        android:layout_width="409dp"
-        android:layout_height="100dp"
-        app:cardBackgroundColor="@color/BalticSeabgcolor"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/quiz_titlebox"
+        android:background="@drawable/rbc_rec"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/CardViewShape">
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/quiz_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Quizzes"
+            android:textColor="@color/BalticSeabgcolor"
+            android:textSize="40sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintBottom_toBottomOf="@+id/quiz_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.321"
+            app:layout_constraintStart_toEndOf="@+id/quiz_icon"
+            app:layout_constraintTop_toTopOf="@+id/quiz_icon"
+            app:layout_constraintVertical_bias="0.8" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="160dp"
-                android:layout_height="90dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/quizicon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:id="@+id/quiz_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/quiz_new_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <ImageView
+            android:id="@+id/quiz_search_icon"
+            android:layout_width="43dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_baseline_search_24"
+            app:layout_constraintBottom_toBottomOf="@+id/quiz_Text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.867"
+            app:layout_constraintStart_toEndOf="@+id/quiz_Text"
+            app:layout_constraintTop_toTopOf="@+id/quiz_Text"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <HorizontalScrollView
         android:id="@+id/quiz_horizontalScrollView"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
+        app:layout_constraintTop_toBottomOf="@+id/quiz_titlebox">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:padding="5dp"
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
@@ -140,9 +166,10 @@
     </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="559dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

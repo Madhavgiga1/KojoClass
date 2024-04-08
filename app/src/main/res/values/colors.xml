@@ -48,5 +48,9 @@
     <color name="brightgreen">#8AE98D</color>
     <color name="mixred">#FC574E</color>
 
+    <color name="gradient1">#03D976</color>
+    <color name="gradient2">#00B6CE</color>
+    <color name="nice_blue">#1957C8</color>
+
 
 </resources>
