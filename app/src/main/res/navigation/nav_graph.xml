@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_sign_up" />
     <fragment
         android:id="@+id/signinFragment"
-        android:name="com.example.reater.ui.fragments.SigninFragment"
+        android:name="com.example.reater.ui.fragments.authentication.SigninFragment"
         android:label="fragment_signin"
         tools:layout="@layout/fragment_signin" />
     <fragment

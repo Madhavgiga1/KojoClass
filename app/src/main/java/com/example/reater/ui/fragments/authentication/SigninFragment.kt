@@ -1,4 +1,4 @@
-package com.example.reater.ui.fragments
+package com.example.reater.ui.fragments.authentication
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
