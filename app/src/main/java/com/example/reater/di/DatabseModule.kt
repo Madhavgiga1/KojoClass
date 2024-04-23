@@ -12,14 +12,4 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
-
-    @Singleton
-    @Provides
-    fun provideDatabase(
-        @ApplicationContext context:Context
-    )= Room.databaseBuilder(context,RecipesDatabase::class.java,DATABASE_NAME).build()
-
-    @Singleton
-    @Provides
-    fun provideDao(database: RecipesDatabase)=database.recipesDao()
 }
