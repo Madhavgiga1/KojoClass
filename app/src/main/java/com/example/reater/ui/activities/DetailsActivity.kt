@@ -26,7 +26,7 @@ class DetailsActivity : AppCompatActivity() {
         titles.add("Files")
 
         val resultBundle = Bundle()
-        resultBundle.putString("recipeBundle", args.subjectLectureID)
+        //resultBundle.putString("recipeBundle", args.subjectLectureID)
 
     }
 }

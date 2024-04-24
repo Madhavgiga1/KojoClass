@@ -8,13 +8,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.reater.R
 import com.example.reater.adapters.ClassAdapter
 import com.example.reater.databinding.FragmentHomeBinding
 import com.example.reater.utils.NetworkResult
 import com.example.reater.viewmodels.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@AndroidEntryPoint
+@ExperimentalCoroutinesApi
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -31,8 +36,10 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
-        setupRecyclerView()
+        binding.cardcontainer.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_userProfileFragment)
+        }
+        //setupRecyclerView()
         requestAPIData()
 
         return binding.root

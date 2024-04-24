@@ -19,8 +19,8 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: Repository, application: Application) : AndroidViewModel(application) {
 
-    var StudentProfileResponse:MutableLiveData<NetworkResult<Student>> =MutableLiveData()
-    var StudentClassResponse:MutableLiveData<NetworkResult<Subjects>> = MutableLiveData()
+    var StudentProfileResponse: MutableLiveData<NetworkResult<Student>> =MutableLiveData()
+    var StudentClassResponse: MutableLiveData<NetworkResult<Subjects>> = MutableLiveData()
 
     fun getStudentProfile(queries: Map<String,String>)=viewModelScope.launch{
         getStudentProfileSafely(queries)

@@ -1,3 +1,6 @@
+package com.example.reater.di
+
+import com.example.reater.data.network.ReaterApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,6 +41,13 @@ object NetworkModule {
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory).build()
     }
+
+    @Singleton
+    @Provides
+    fun provideKojoApi(retrofit: Retrofit): ReaterApi {
+        return retrofit.create(ReaterApi::class.java)
+    }
+
 
 
 }

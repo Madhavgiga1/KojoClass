@@ -7,13 +7,13 @@ import retrofit2.Response
 import javax.inject.Inject
 
 
-class RemoteDataSource @Inject constructor(private val StudentsApi: ReaterApi) {
+class RemoteDataSource @Inject constructor(private val KojoAPI: ReaterApi) {
 
     suspend fun getStudentProfile(queries: Map<String,String>): Response<Student> {
-        return StudentsApi.getStudentData(queries)
+        return KojoAPI.getStudentData(queries)
     }
 
     suspend fun getStudentClasses(queries: Map<String,String>): Response<Subjects> {
-        return StudentsApi.getStudentClassData(queries)
+        return KojoAPI.getStudentClassData(queries)
     }
 }
