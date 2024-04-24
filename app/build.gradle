@@ -1,23 +1,22 @@
-
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.secrets_gradle_plugin' version '0.4'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-parcelize'
-
+    id 'com.google.gms.google-services'
 }
 
 android {
-    compileSdk 33
+    compileSdkVersion 31
+    buildToolsVersion '33.0.1'
 
     defaultConfig {
         applicationId "com.example.reater"
-        minSdk 31
-        targetSdk 33
+        minSdkVersion 31
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -30,24 +29,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    //repositories {
-
-    //}
-
 
     buildFeatures {
         dataBinding true
         viewBinding true
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    compileSdkVersion 33
-    buildToolsVersion '33.0.1'
+
 }
 
 dependencies {
@@ -62,6 +58,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.4.1'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'com.google.firebase:firebase-database:20.3.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -82,10 +79,6 @@ dependencies {
     implementation "androidx.room:room-ktx:2.4.3"
     androidTestImplementation "androidx.room:room-testing:2.4.3"
 
-    // Data binding
-//    kapt "com.android.databinding:compiler:3.2.0-alpha10"
-//    kapt "androidx.databinding:databinding-common:4.2.2"
-
     // DataStore
     implementation "androidx.datastore:datastore-preferences:1.0.0"
 
@@ -97,8 +90,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     // Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.43.2"
-    kapt "com.google.dagger:hilt-android-compiler:2.42"
+    // Update Dagger-Hilt version
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    kapt "com.google.dagger:hilt-android-compiler:2.44.2"
     kapt "androidx.hilt:hilt-compiler:1.0.0"
 
     // Coroutines
@@ -117,13 +111,12 @@ dependencies {
     // Gson
     implementation 'com.google.code.gson:gson:2.9.0'
 
-    // Shimmer
-    implementation 'com.facebook.shimmer:shimmer:0.5.0'
-
     // Jsoup
     implementation 'org.jsoup:jsoup:1.13.1'
 
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+
 
 
 

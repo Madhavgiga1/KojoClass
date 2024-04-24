@@ -48,10 +48,11 @@ class HomeFragment : Fragment() {
         mainViewModel.StudentClassResponse.observe(viewLifecycleOwner,{ response->
             when(response){
                 is NetworkResult.Loading->{
-
+                    binding.progressBar.visibility=View.VISIBLE
                 }
 
                 is NetworkResult.Error->{
+                    binding.progressBar.visibility=View.GONE
                     Toast.makeText(
                         requireContext(),
                         response.message.toString(),
@@ -60,6 +61,7 @@ class HomeFragment : Fragment() {
                 }
 
                 is NetworkResult.Success->{
+                    binding.progressBar.visibility=View.GONE
                     response.data?.let {
 
                     }
