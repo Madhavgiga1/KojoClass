@@ -9,10 +9,11 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="4dp"
         android:id="@+id/quiz_titlebox"
         android:background="@drawable/rbc_rec"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="65dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,10 +30,10 @@
             app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintBottom_toBottomOf="@+id/quiz_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.321"
+            app:layout_constraintHorizontal_bias="0.304"
             app:layout_constraintStart_toEndOf="@+id/quiz_icon"
             app:layout_constraintTop_toTopOf="@+id/quiz_icon"
-            app:layout_constraintVertical_bias="0.8" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <ImageView
             android:id="@+id/quiz_icon"
@@ -64,7 +65,7 @@
         android:id="@+id/quiz_horizontalScrollView"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_titlebox">
@@ -72,7 +73,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="5dp"
+            android:padding="2dp"
             android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView

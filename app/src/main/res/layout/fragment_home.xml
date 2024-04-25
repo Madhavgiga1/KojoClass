@@ -4,122 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#283036"
+    android:background="@color/backgroundwhitishbg"
     tools:context=".ui.fragments.HomeFragment">
 
 
-    <TextView
-        android:id="@+id/Greeting_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:text="Good afternoon!"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:fontFamily="@font/barlow_extrabold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardcontainer"
-        android:layout_width="wrap_content"
-
-        android:layout_height="60dp"
-        android:layout_marginStart="28dp"
-        app:cardBackgroundColor="#283036"
-        app:strokeColor="@color/Cream"
-        app:strokeWidth="1dp"
-        android:layout_marginTop="12dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Greeting_text">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/greeting_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="Madhav Sharma"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                app:fontFamily="@font/barlow_extrabold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:src="@drawable/upright"
-                app:layout_constraintStart_toEndOf="@+id/greeting_value"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rtc"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/cardcontainer"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/redblue_gradient"
+        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        app:layout_constraintTop_toBottomOf="@+id/cardcontainer">
+        <TextView
+            android:id="@+id/greeting_value"
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:padding="2dp"
+            android:text="Madhav Sharma"
+            android:textColor="@color/Cream"
+            android:textSize="40sp"
+            app:fontFamily="@font/baloo_paaji_2_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greeting_time" />
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="24dp"
+        <TextView
+            android:id="@+id/greeting_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/filter"
+            android:text="Greetings"
+            android:textColor="@color/Greyish"
+            android:textSize="25sp"
+            app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="47dp"
-            android:layout_height="52dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_baseline_search_24"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView11"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/classRV"
-            android:layout_width="400dp"
-            android:layout_height="522dp"
+            android:id="@+id/profile_picture"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/hia"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+            app:layout_constraintStart_toEndOf="@+id/greeting_value"
+            app:layout_constraintTop_toTopOf="@+id/greeting_value" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchbar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/drc"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="Search Classes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/class_searchmic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/class_searchmic"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            android:src="@drawable/microphone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/Greeting_text"
-        app:layout_constraintStart_toEndOf="@+id/Greeting_text"
-        app:layout_constraintTop_toTopOf="@+id/Greeting_text"
-        app:layout_constraintVertical_bias="0.478" />
+        android:layout_marginTop="20dp"
+        android:text="Classes"
+        android:textColor="@color/dark"
+        android:textSize="34sp"
+        app:fontFamily="@font/barlow_extrabold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardcontainer" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/class_2108926"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classRV"
+        android:layout_width="409dp"
+        android:layout_height="469dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchbar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,11 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/ct_rec_bg.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/drc.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/rbc_rec.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/rec_round_bg.xml" value="0.35208333333333336" />
-        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/redblue_gradient.xml" value="0.35208333333333336" />
+        <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/redblue_gradient.xml" value="0.176" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/rounded_bottom_rectangle.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/drawable/rtc.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/sharm/AndroidStudioProjects/Reater/app/src/main/res/layout/activity_details.xml" value="0.23731884057971014" />

@@ -13,28 +13,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Profile"
+        android:textColor="@color/dark"
+        android:textSize="25sp"
+        android:paddingEnd="4dp"
+        app:fontFamily="@font/barlow_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/User_Image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/student2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/User_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:text="Madhav Sharma"
+        android:textColor="@color/BalticSeabgcolor"
+        android:textSize="25sp"
+        android:paddingEnd="4dp"
+        app:fontFamily="@font/barlow_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/User_Name">
 
         <LinearLayout
+            android:layout_marginHorizontal="3dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
