@@ -2,34 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/nav_graph">
 
-    <fragment
-        android:id="@+id/authHomeFragment"
-        android:name="com.example.reater.ui.fragments.authentication.AuthHomeFragment"
-        android:label="AuthHomeFragment" >
-        <action
-            android:id="@+id/action_authHomeFragment_to_signinFragment"
-            app:destination="@id/signinFragment" />
-        <action
-            android:id="@+id/action_authHomeFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/signUpFragment"
-        android:name="com.example.reater.ui.fragments.authentication.SignUpFragment"
-        android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
-    <fragment
-        android:id="@+id/signinFragment"
-        android:name="com.example.reater.ui.fragments.authentication.SigninFragment"
-        android:label="fragment_signin"
-        tools:layout="@layout/fragment_signin" >
-        <action
-            android:id="@+id/action_signinFragment_to_userProfileFragment"
-            app:destination="@id/userProfileFragment" />
-    </fragment>
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.example.reater.ui.fragments.QuizFragment"

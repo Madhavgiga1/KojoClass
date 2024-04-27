@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Email Address"
+        android:hint="Enrollment"
         android:layout_marginTop="20dp"
         android:textColorHint="@color/Pewter"
         android:backgroundTint="@color/purple_200"
@@ -78,6 +78,7 @@
         app:strokeWidth="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginbox"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -120,6 +121,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/materialCardView"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

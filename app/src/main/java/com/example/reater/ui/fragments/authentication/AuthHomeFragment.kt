@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.reater.R
 import com.example.reater.databinding.FragmentAuthHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class AuthHomeFragment : Fragment() {
 
     private var _binding:FragmentAuthHomeBinding?=null
@@ -24,7 +26,7 @@ class AuthHomeFragment : Fragment() {
         _binding= FragmentAuthHomeBinding.inflate(inflater,container,false)
         val navController=findNavController()
         binding.Signup.setOnClickListener {
-            navController.navigate(R.id.action_authHomeFragment_to_signUpFragment)
+            navController.navigate(R.id.action_authHomeFragment_to_signUpFragment2)
         }
         binding.signin.setOnClickListener {
             navController.navigate(R.id.action_authHomeFragment_to_signinFragment)
