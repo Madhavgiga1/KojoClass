@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.reater.data.Repository
 import com.example.reater.models.LoginRequest
 import com.example.reater.models.LoginResponse
+import com.example.reater.models.SignupRequest
 import com.example.reater.models.Subjects
 import com.example.reater.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,6 +23,8 @@ import javax.inject.Inject
 class AuthenticationViewModel @Inject constructor(private val repository: Repository, application: Application) : AndroidViewModel(application) {
 
     var StudentProfileResponse: MutableLiveData<NetworkResult<LoginResponse>> = MutableLiveData()
+
+
 
     fun getStudentProfile(loginRequest: LoginRequest) = viewModelScope.launch {
         getStudentProfileSafely(loginRequest)
@@ -60,6 +63,29 @@ class AuthenticationViewModel @Inject constructor(private val repository: Reposi
             }
         }
     }
+
+    var studentSignupProfile:MutableLiveData<NetworkResult<LoginResponse>> = MutableLiveData()
+
+    fun signupStudent(signupRequest: SignupRequest) = viewModelScope.launch {
+        SignupStudentSafely(signupRequest)
+    }
+    private suspend fun SignupStudentSafely(signupRequest: SignupRequest) {
+        StudentProfileResponse.value = NetworkResult.Loading()
+
+        if (hasInternetConnection()) {
+            try {
+                var response = repository.remote.RegisterStudent(signupRequest)
+                studentSignupProfile.value = handleStudentProfileResponse(response)
+            } catch (e: Exception) {
+                studentSignupProfile.value = NetworkResult.Error("Error Connecting to the API")
+            }
+
+        } else {
+            studentSignupProfile.value = NetworkResult.Error("No Internet Connection")
+        }
+    }
+
+
     private fun hasInternetConnection(): Boolean {
         val connectivityManager = getApplication<Application>().getSystemService(
             Context.CONNECTIVITY_SERVICE

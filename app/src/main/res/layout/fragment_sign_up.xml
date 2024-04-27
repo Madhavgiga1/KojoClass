@@ -43,12 +43,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="7dp"
                 android:text="Enter required Details Please"
                 android:textColor="@color/ShadeofDark"
-                android:padding="7dp"
                 android:textSize="27sp"
-                app:fontFamily="@font/barlow_extrabold"
-                >
+                app:fontFamily="@font/barlow_extrabold">
 
             </TextView>
 
@@ -59,14 +58,14 @@
                 android:background="@drawable/rec_round_bg">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/textView"
+                    android:id="@+id/EnrollmentNumbersignup"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:gravity="start|center_vertical"
                     android:hint="Enrollment Number"
+                    android:inputType="phone"
                     android:textColor="@color/ShadeofDark"
                     android:textSize="20sp"
-
                     app:fontFamily="@font/barlow_extrabold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -82,12 +81,56 @@
                 android:background="@drawable/rec_round_bg">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/Enrollentyear_Signup_Value"
+                    android:id="@+id/Password_Signup"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:fontFamily="@font/baloo_paaji_2_extrabold"
                     android:gravity="start|center_vertical"
-                    android:hint="Enrollment Year"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+
+                android:background="@drawable/rec_round_bg">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/Email_Signup_Value"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/baloo_paaji_2_extrabold"
+                    android:gravity="start|center_vertical"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+
+                android:background="@drawable/rec_round_bg">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/FullName_Signup_Value"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/baloo_paaji_2_extrabold"
+                    android:gravity="start|center_vertical"
+                    android:hint="Full Name"
                     android:inputType="text"
                     android:paddingStart="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -129,15 +172,44 @@
                     android:id="@+id/EnrollmentYear_Signup"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:fontFamily="@font/baloo_paaji_2_extrabold"
+                    android:fontFamily="@font/barlow_extrabold"
                     android:gravity="start|center_vertical"
-                    android:hint="Enter Enrollment Year"
+                    android:hint="Enrollment Year"
                     android:inputType="phone"
                     android:paddingStart="10dp"
-                    android:textColor="@color/dark"
+                    android:textColor="@color/ShadeofDark"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rec_round_bg">
+
+                <Spinner
+                    android:id="@+id/class_id_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ClassIDName"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ClassIDName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="start|center_vertical"
+                    android:padding="7dp"
+                    android:text="Class ID"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/barlow_extrabold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -154,11 +226,11 @@
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView21"
+                    app:layout_constraintStart_toEndOf="@+id/ClassidName"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/ClassidName"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:gravity="start|center_vertical"
@@ -208,12 +280,12 @@
                 android:background="@drawable/rec_round_bg">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/textView23"
+                    android:id="@+id/FatherName"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:fontFamily="@font/baloo_paaji_2_extrabold"
                     android:gravity="start|center_vertical"
-                    android:hint="Enter Father's Name"
+                    android:hint="Father's Name"
                     android:inputType="text"
                     android:textColor="@color/dark"
                     android:textSize="20sp"
@@ -265,4 +337,15 @@
         app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toTopOf="@+id/textView24"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
 </androidx.constraintlayout.widget.ConstraintLayout>

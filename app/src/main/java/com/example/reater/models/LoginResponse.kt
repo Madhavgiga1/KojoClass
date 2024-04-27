@@ -7,36 +7,15 @@ data class LoginResponse(
     @SerializedName("code")
     var code: Int,
     @SerializedName("data")
-    var data: Student, // Nested data class
+    var data: StudentResponse, // Nested data class
     @SerializedName("id")
     var id: String,
     @SerializedName("message")
     var message: String
 ) {
-    data class Student(
-        @SerializedName("EnrollementID")
-        val enrollmentID: Int,
-
-        @SerializedName("fullName")
-        val fullName: String,
-
-        @SerializedName("DegreeID")
-        val degreeID: String,
-
-        @SerializedName("ClassID")
-        val classID: String,
-
-        @SerializedName("PhoneNumber")
-        val phoneNumber: String,
-
-        @SerializedName("EnrollmentYear")
-        val enrollmentYear: Int,
-
-        @SerializedName("Email")
-        val email: String,
-
-        @SerializedName("DOB")
-        val dob: String,
+    data class StudentResponse(
+        @SerializedName("student")
+        var student: Student,
 
         @SerializedName("Token")
         val token: String

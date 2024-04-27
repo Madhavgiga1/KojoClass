@@ -4,36 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/greenishbg"
+    android:background="@drawable/hia"
     tools:context=".ui.fragments.authentication.AuthHomeFragment">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="100dp"
-
-        android:src="@drawable/logn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/Signup"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         app:cardBackgroundColor="#FBD815"
-        app:cardCornerRadius="25dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="@color/BalticSeabgcolor"
-        app:strokeWidth="3dp">
+        app:strokeWidth="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -43,21 +31,25 @@
                 android:id="@+id/signuptext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
                 android:text="Create Account"
                 android:textColor="@color/greenishbg"
-                android:textSize="32sp"
-                app:fontFamily="@font/baloo_paaji_2_extrabold"
+                android:textSize="24sp"
+                app:fontFamily="@font/alatsi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/signin"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="40dp"
@@ -78,8 +70,9 @@
                 android:id="@+id/signintext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Login To your Account"
-                android:textColor="@color/white"
+                android:textColor="@color/BalticSeabgcolor"
                 android:textSize="24sp"
                 app:fontFamily="@font/alatsi"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -91,16 +84,28 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/baloo_paaji_2_extrabold"
+        android:layout_width="285dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/barlow_extrabold"
+        android:paddingEnd="7dp"
         android:text="Let's Get Started!"
-        android:textColor="@color/Cream"
-        android:textSize="38sp"
+        android:textColor="@color/white"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="61dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/startup"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

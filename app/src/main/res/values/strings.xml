@@ -33,6 +33,31 @@
         <item>B. Sc. (Hons.) Maths</item>
         <item>B. Com. (Hons)</item>
     </string-array>
+
+    <string-array name="Class_Names">
+        <item>LT5E3</item>
+        <item>HP7D2</item>
+        <item>XZ9F5</item>
+        <item>QW2R8</item>
+        <item>YU3T6</item>
+        <item>AB4C7</item>
+        <item>KL8M2</item>
+        <item>OP1N9</item>
+        <item>CD6E4</item>
+        <item>FG5H1</item>
+        <item>VB3Z6</item>
+        <item>PO9I2</item>
+        <item>RT6Y4</item>
+        <item>NM2Q7</item>
+        <item>LK1J8</item>
+        <item>WS7X5</item>
+        <item>ED3V6</item>
+        <item>UY4B1</item>
+        <item>ZX8C2</item>
+        <item>RF9G3</item>
+        <!-- Add more class names if needed -->
+    </string-array>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
