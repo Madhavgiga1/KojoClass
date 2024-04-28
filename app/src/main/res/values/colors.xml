@@ -39,7 +39,7 @@
     <color name="coral">#FF7F50</color>
     <color name="darkorange">#FF8C00</color>
 
-    <color name="Slightdarkorange">#ff723b</color>
+    <color name="yellow">#FFCF54</color>
     <color name="slightgrey">#91a2b4</color>
     <color name="maybecyant">#cbeadc</color>
     <color name="ShadeofDark">#283036</color>
@@ -55,6 +55,13 @@
     <color name="slightlydarkishwhite">#FAE7E6E5</color>
 
     <color name="whiteee">#FAE7E6E5</color>
+
+    <color name="sblack">#2C3051</color>
+    <color name="lightdarkblue">#53588A</color>
+    <color name="verylightblue">#9BA5FF</color>
+    <color name="reddie">#F04444</color>
+    <color name="newblack">#0C3B2E</color>
+
 
 
 </resources>
