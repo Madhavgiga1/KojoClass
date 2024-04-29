@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hia"
+    android:background="@color/greenishbg"
     tools:context=".ui.fragments.authentication.AuthHomeFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/Signup"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="20dp"
@@ -25,31 +25,39 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:padding="5dp"
             android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/signuptext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="Create Account"
-                android:textColor="@color/greenishbg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|left"
+
+                android:text="Create your Account"
+                android:textColor="@color/black"
                 android:textSize="24sp"
-                app:fontFamily="@font/alatsi"
+                app:fontFamily="@font/mazzardbolditalic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.503"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView17"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:src="@drawable/register"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/signin"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="40dp"
@@ -64,19 +72,29 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:padding="5dp"
             android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/signintext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center|left"
                 android:text="Login To your Account"
-                android:textColor="@color/BalticSeabgcolor"
+                android:textColor="@color/glightGray"
                 android:textSize="24sp"
-                app:fontFamily="@font/alatsi"
+                app:fontFamily="@font/mazzardbolditalic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView18"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:src="@drawable/key"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -85,27 +103,61 @@
     <TextView
         android:id="@+id/textView20"
         android:layout_width="285dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/barlow_extrabold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/mazzardextrabold"
+        android:gravity="center"
+        android:text="Welcome to "
+        android:textColor="@color/maybecyant"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="7dp"
         android:paddingEnd="7dp"
-        android:text="Let's Get Started!"
+        android:paddingBottom="7dp"
+        android:text="KojoClass App"
         android:textColor="@color/white"
         android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:fontFamily="@font/mazzardextrabold"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="61dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="28dp"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/startup"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="7dp"
+        android:padding="10dp"
+        android:src="@drawable/studyillus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="( The best classroom app out there! )"
+        android:textColor="@color/mixred"
+        android:textSize="16sp"
+        app:fontFamily="@font/mazzardextrabold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

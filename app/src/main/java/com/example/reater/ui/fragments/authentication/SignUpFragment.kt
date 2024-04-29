@@ -35,7 +35,7 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        binding.progressBar2.visibility=View.INVISIBLE
+        //binding.progressBar2.visibility=View.INVISIBLE
         ArrayAdapter.createFromResource(
             requireContext(),
             R.array.Degree_Names,
@@ -59,7 +59,7 @@ class SignUpFragment : Fragment() {
             val password = binding.PasswordSignup.text.toString()
             val enrolmentYear = binding.EnrollmentYearSignup.text.toString()
             val fullname = binding.FullNameSignupValue.text.toString()
-            val dob = binding.editTextDate.text.toString()
+            val dob = binding.editTextDate.date.toString()
             val phone = binding.PhoneNumber.text.toString()
             var degreename = binding.spinner.selectedItem.toString()
             var classid=binding.classIdSpinner.selectedItem.toString()
@@ -85,16 +85,16 @@ class SignUpFragment : Fragment() {
         authenticationViewModel.studentSignupProfile.observe(viewLifecycleOwner,{response->
             when (response){
                 is NetworkResult.Loading->{
-                    binding.progressBar2.visibility=View.VISIBLE
+                    //binding.progressBar2.visibility=View.VISIBLE
                 }
 
                 is NetworkResult.Error->{
-                    binding.progressBar2.visibility=View.INVISIBLE
+                    //binding.progressBar2.visibility=View.INVISIBLE
                     Toast.makeText(requireContext(),"Error Connecting to Server",Toast.LENGTH_SHORT).show()
                 }
 
                 is NetworkResult.Success->{
-                    binding.progressBar2.visibility=View.INVISIBLE
+                    //binding.progressBar2.visibility=View.INVISIBLE
                     Toast.makeText(requireContext(),"Successfully Logged In ",Toast.LENGTH_SHORT).show()
                     var intent= Intent(requireContext(), MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
