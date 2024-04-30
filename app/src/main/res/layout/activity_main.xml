@@ -22,8 +22,10 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:backgroundTint="@color/anothergoodinputcolor"
+        android:layout_height="55dp"
+        app:backgroundTint="@color/dark"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/slightlydarkishwhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

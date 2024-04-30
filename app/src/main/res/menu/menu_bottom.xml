@@ -9,17 +9,17 @@
     <item
         android:id="@+id/quizFragment"
         android:title="@string/menu_quiz"
-        android:icon="@drawable/ic_baseline_quickreply_24"/>
+        android:icon="@drawable/choose"/>
 
     <item
         android:id="@+id/assignmentFragment"
         android:title="@string/menu_assignments"
-        android:icon="@drawable/ic_baseline_assignment_24"/>
+        android:icon="@drawable/homework"/>
 
     <item
         android:id="@+id/notesFragment"
         android:title="@string/menu_Notes"
-        android:icon="@drawable/ic_baseline_sticky_note_2_24"/>
+        android:icon="@drawable/wirte"/>
 
 
 

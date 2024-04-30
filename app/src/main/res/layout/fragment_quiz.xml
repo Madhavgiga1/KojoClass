@@ -9,25 +9,25 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:padding="4dp"
         android:id="@+id/quiz_titlebox"
-        android:background="@drawable/rbc_rec"
         android:layout_width="0dp"
-        android:layout_height="65dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rbc_rec"
+        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/quiz_Text"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
             android:text="Quizzes"
-            android:textColor="@color/BalticSeabgcolor"
+            android:textColor="@color/maybecyant"
             android:textSize="40sp"
-            app:fontFamily="@font/barlow_extrabold"
+            app:fontFamily="@font/mazzardbold"
             app:layout_constraintBottom_toBottomOf="@+id/quiz_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.304"
@@ -39,32 +39,19 @@
             android:id="@+id/quiz_icon"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="80dp"
             android:src="@drawable/quiz_new_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
-
-        <ImageView
-            android:id="@+id/quiz_search_icon"
-            android:layout_width="43dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="12dp"
-            android:src="@drawable/ic_baseline_search_24"
-            app:layout_constraintBottom_toBottomOf="@+id/quiz_Text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.867"
-            app:layout_constraintStart_toEndOf="@+id/quiz_Text"
-            app:layout_constraintTop_toTopOf="@+id/quiz_Text"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.444" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <HorizontalScrollView
         android:id="@+id/quiz_horizontalScrollView"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,8 +60,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="2dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="2dp">
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/uq_card"
@@ -93,7 +80,7 @@
                     <ImageView
                         android:id="@+id/uq_icon"
                         android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_height="0dp"
                         android:layout_marginStart="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -103,13 +90,13 @@
                     <TextView
                         android:id="@+id/uq_text"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="5dp"
                         android:fontFamily="@font/barlow_extrabold"
                         android:gravity="center"
                         android:text="Upcoming Quizzes"
-                        android:textColor="@color/white"
+                        android:textColor="@color/yellow"
                         android:textSize="25sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

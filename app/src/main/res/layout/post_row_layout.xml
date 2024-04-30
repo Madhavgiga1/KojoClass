@@ -3,103 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
     android:layout_marginVertical="5dp"
-    android:background="@drawable/rtc"
-    android:layout_height="wrap_content">
+    android:background="@drawable/rounded_bottom_rectangle"
+    >
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:fontFamily="@font/baloo_paaji_2_extrabold"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:background="@drawable/lcr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/announcement" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Teacher_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:fontFamily="@font/barlow_extrabold"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        android:layout_marginTop="16dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:src="@drawable/castle" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/Post_Author_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="TextView"
-        app:fontFamily="@font/barlow_extrabold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginStart="10dp"
+        android:text="Veena Khandelwal"
+        android:textColor="@color/ShadeofDark"
+        android:textSize="20sp"
+        app:fontFamily="@font/mazzardbold"
+        app:layout_constraintStart_toEndOf="@+id/Teacher_image"
+        app:layout_constraintTop_toTopOf="@+id/Teacher_image" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/Post_Timestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="TextView"
-        app:fontFamily="@font/barlow_extrabold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView15"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="@+id/textView15"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginStart="10dp"
+        android:text="15 April"
+        android:textColor="@color/yellow"
+        android:textSize="12sp"
+        app:fontFamily="@font/mazzardbold"
+        app:layout_constraintStart_toEndOf="@+id/Teacher_image"
+        app:layout_constraintTop_toBottomOf="@+id/Post_Author_Name" />
 
     <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:fontFamily="@font/baloo_paaji_2_extrabold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toTopOf="@+id/textView16" />
-
-    <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/Announcement_Description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="5dp"
-        android:text="TextView"
-        app:fontFamily="@font/rammetto_one"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="7dp"
-        android:layout_marginVertical="5dp"
-        android:padding="7dp"
-        android:background="@drawable/rounded_bottom_rectangle"
-        android:text="TextView"
-        app:fontFamily="@font/bowlby_one"
+        android:layout_marginTop="6dp"
+        android:padding="6dp"
+        android:text="This is Da Description"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:fontFamily="@font/alatsi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/Teacher_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>

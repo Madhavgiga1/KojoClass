@@ -5,65 +5,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/glightGray"
     tools:context=".ui.fragments.AssignmentFragment">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/assignemnt_titlebox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rbc_rec"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/assignemnt_titlebox"
-            android:background="@drawable/rbc_rec"
+        <TextView
+            android:id="@+id/Assignment_Text"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="Assignments"
+            android:textColor="@color/maybecyant"
+            android:textSize="34sp"
+            app:fontFamily="@font/mazzardextrabold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/books"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintVertical_bias="0.225" />
 
-            <TextView
-                android:id="@+id/Assignment_Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="Assignments"
-                android:textColor="@color/BalticSeabgcolor"
-                android:textSize="40sp"
-                app:fontFamily="@font/barlow_extrabold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.114"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
-                app:layout_constraintTop_toTopOf="@+id/imageView7" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/corrective_12091668"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.225" />
-
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="43dp"
-                android:layout_height="47dp"
-                android:layout_marginStart="12dp"
-                android:src="@drawable/ic_baseline_search_24"
-                app:layout_constraintBottom_toBottomOf="@+id/Assignment_Text"
-                app:layout_constraintStart_toEndOf="@+id/Assignment_Text"
-                app:layout_constraintTop_toTopOf="@+id/Assignment_Text"
-                app:layout_constraintVertical_bias="1.0" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <HorizontalScrollView
         android:id="@+id/assignment_horizontalScrollView"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +79,7 @@
                     <ImageView
                         android:id="@+id/ua_icon"
                         android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_height="0dp"
                         android:layout_marginStart="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -105,11 +92,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="5dp"
-                        android:fontFamily="@font/barlow_extrabold"
-                        android:padding="4dp"
+                        android:fontFamily="@font/mazzardbolditalic"
                         android:gravity="center"
+                        android:padding="4dp"
                         android:text="Pending"
-                        android:textColor="@color/white"
+                        android:textColor="@color/yellow"
                         android:textSize="25sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -132,14 +119,15 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
+
                     android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/pa_icon"
                         android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_height="0dp"
                         android:layout_marginStart="4dp"
-                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/past" />
@@ -149,7 +137,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="2dp"
-                        android:fontFamily="@font/barlow_extrabold"
+                        android:fontFamily="@font/mazzardextrabold"
                         android:gravity="center"
                         android:text="Past Assignments"
                         android:textColor="@color/BalticSeabgcolor"

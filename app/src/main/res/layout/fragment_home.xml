@@ -64,12 +64,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/searchbar"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/drc"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/rounded_bottom_rectangle"
         android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4">
 
@@ -86,7 +86,7 @@
 
         <ImageView
             android:id="@+id/class_searchmic"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="0dp"
             android:src="@drawable/microphone"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +103,7 @@
         android:layout_marginTop="20dp"
         android:text="Classes"
         android:textColor="@color/dark"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:fontFamily="@font/barlow_extrabold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardcontainer" />
@@ -111,7 +111,7 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:src="@drawable/class_2108926"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
@@ -131,6 +131,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchbar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView8"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7dp"
+        android:src="@drawable/filter"
+        app:civ_border_color="@color/ShadeofDark"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/searchbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchbar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

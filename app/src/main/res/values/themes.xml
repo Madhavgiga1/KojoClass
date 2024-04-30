@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Reater" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/slightgrey</item>
+        <item name="colorPrimary">@color/dark</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -23,10 +23,13 @@
 
     </style>
 
-    <style name="CustomTabLayoutStyle" parent="Widget.Design.TabLayout">
+    <style name="CustomTabLayoutStyle"
+        parent="Widget.Design.TabLayout">
+
         <item name="background">@color/GunmetalGray</item>
         <item name="tabIndicatorColor">@color/Cream</item>
-        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabIndicatorHeight">1dp</item>
+        <item name="android:fontFamily">@font/mazzard</item>
         <item name="tabSelectedTextColor">@color/Cream</item>
     </style>
     <style name="CustomTabTextStyle" parent="TextAppearance.Design.Tab">
