@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayout
 import java.util.ArrayList
 
 class DetailsActivity : AppCompatActivity() {
-    private val args by navArgs<DetailsActivityArgs>()
+    //private val args by navArgs<DetailsActivityArgs>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

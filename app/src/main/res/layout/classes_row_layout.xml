@@ -2,43 +2,98 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="230dp"
-    android:layout_height="300dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="3dp"
+
     android:background="@drawable/rounded_bottom_rectangle">
 
+    <View
+        android:id="@+id/view3"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:background="@drawable/lcr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/subject_image_id"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toEndOf="@+id/view3"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/house" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="Subject"
-        android:textColor="@color/maybecyant"
-        android:textSize="30sp"
-        app:fontFamily="@font/fredoka_one"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/Subject_Name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/mazzardbold"
+        android:text="Subject Name"
+        android:textColor="@color/dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subject_image_id"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_send_24" />
+        app:layout_constraintStart_toEndOf="@+id/subject_image_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Subject_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+
+        android:fontFamily="@font/mazzardbold"
+        android:text="SubjectID : "
+        android:textColor="@color/slightgrey"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/subject_image_id" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/mazzardbold"
+        android:text="TextView"
+        android:textColor="@color/sblack"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Subject_ID"
+        app:layout_constraintStart_toEndOf="@+id/Subject_ID"
+        app:layout_constraintTop_toTopOf="@+id/Subject_ID" />
+
+    <TextView
+        android:id="@+id/Teacher_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/mazzardbold"
+
+        android:text="Teacher Name : "
+        android:textColor="@color/slightgrey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/Subject_ID" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/mazzardbold"
+        android:text="TextView"
+        android:textColor="@color/sblack"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Teacher_Name"
+        app:layout_constraintStart_toEndOf="@+id/Teacher_Name"
+        app:layout_constraintTop_toTopOf="@+id/Teacher_Name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
