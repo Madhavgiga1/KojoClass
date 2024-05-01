@@ -5,7 +5,7 @@
     <data>
         <variable
             name="individual_material"
-            type="com.example.reater.models.File" />
+            type="com.example.reater.models.StudyMaterial" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -58,6 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fileRV"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="1dp"

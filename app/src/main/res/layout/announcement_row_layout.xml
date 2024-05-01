@@ -18,27 +18,26 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="30dp"
-            android:layout_height="0dp"
-            android:background="@drawable/lcr"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@drawable/tcr"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/Teacher_image"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:scaleType="centerCrop"
-            loadImageFromUrl="@{individual_announcement.author}"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:civ_border_width="1dp"
-            app:civ_border_color="#FF000000"
-            app:layout_constraintStart_toEndOf="@+id/view"
-            app:layout_constraintTop_toTopOf="parent"
+            loadImageFromUrl="@{individual_announcement.authorpicture}"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
 
-            android:src="@drawable/castle" />
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/castle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <TextView
             android:id="@+id/Post_Author_Name"
@@ -58,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@{individual_announcement.timeStamp}"
-            android:textColor="@color/yellow"
+            android:textColor="@color/lightdarkblue"
             android:textSize="12sp"
             app:fontFamily="@font/mazzardbold"
             app:layout_constraintStart_toEndOf="@+id/Teacher_image"
@@ -69,14 +68,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
             android:padding="6dp"
             android:text="@{individual_announcement.description}"
             android:textColor="@color/black"
             android:textSize="12sp"
-            app:fontFamily="@font/alatsi"
+            app:fontFamily="@font/mazzardbolditalic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Teacher_image" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

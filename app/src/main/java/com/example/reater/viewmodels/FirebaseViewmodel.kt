@@ -4,20 +4,18 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.reater.models.Announcement
-import com.example.reater.models.File
+import com.example.reater.models.StudyMaterial
 import com.example.reater.utils.NetworkResult
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-import javax.inject.Inject
-
 class FirebaseViewmodel:ViewModel() {
     var database= FirebaseDatabase.getInstance().reference
 
     var AnnouncementsResponse:MutableLiveData<NetworkResult<List<Announcement>>> = MutableLiveData()
-    var FilesResponse:MutableLiveData<NetworkResult<List<File>>> = MutableLiveData()
+    var filesResponse:MutableLiveData<NetworkResult<List<StudyMaterial>>> = MutableLiveData()
 
 
     fun SendAnnouncementsRequest(classid: String) {
@@ -41,12 +39,16 @@ class FirebaseViewmodel:ViewModel() {
     }
 
     fun getStudyMaterials(classid:String){
-        var materiallocation=database.child(classid).child("Materials")
+        var materiallocation=database.child(classid).child("StudyMaterial")
 
         materiallocation.addValueEventListener(object:ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                var materials=snapshot.children.mapNotNull{it.getValue(File::class.java)}
-                FilesResponse.value=NetworkResult.Success(materials)
+                var materials=mutableListOf<StudyMaterial>()
+                for(postSnapshot in snapshot.children){
+                    val material=postSnapshot.getValue(StudyMaterial::class.java)
+                    materials.add(material!!)
+                }
+                filesResponse.value=NetworkResult.Success(materials)
             }
 
             override fun onCancelled(error: DatabaseError) {

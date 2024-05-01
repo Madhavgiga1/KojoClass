@@ -2,7 +2,7 @@ package com.example.reater.models
 
 import com.google.gson.annotations.SerializedName
 
-data class File(
+data class StudyMaterial(
     @SerializedName("filename")
     var filename: String,
 
@@ -14,5 +14,11 @@ data class File(
     var authorName: String,
 
     @SerializedName("Author_DP")
-    var authorDP: String
-)
+    var authorDP: String,
+
+    @SerializedName("FileLocation")
+    var fileLocation: String
+) {
+    // No-argument constructor required by Firebase
+    constructor() : this("", "", "", "","")
+}

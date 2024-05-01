@@ -11,8 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.reater.R
 import com.example.reater.adapters.AnnouncementsAdapter
 import com.example.reater.databinding.FragmentAnnouncementsBinding
+import com.example.reater.models.Announcement
 import com.example.reater.utils.NetworkResult
 import com.example.reater.viewmodels.FirebaseViewmodel
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class PostsFragment : Fragment() {
 
@@ -27,6 +30,9 @@ class PostsFragment : Fragment() {
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding= FragmentAnnouncementsBinding.inflate(inflater, container, false)
+
+
+        // Push the data to Firebase
         setupRecyclerView()
         return binding.root
     }
