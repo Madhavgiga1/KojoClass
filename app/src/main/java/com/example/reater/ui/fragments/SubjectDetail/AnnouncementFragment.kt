@@ -12,12 +12,14 @@ import com.example.reater.R
 import com.example.reater.adapters.AnnouncementsAdapter
 import com.example.reater.databinding.FragmentAnnouncementsBinding
 import com.example.reater.models.Announcement
+import com.example.reater.models.Coursework
+import com.example.reater.utils.Constants
 import com.example.reater.utils.NetworkResult
 import com.example.reater.viewmodels.FirebaseViewmodel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class PostsFragment : Fragment() {
+class AnnouncementFragment : Fragment() {
 
     private var _binding:FragmentAnnouncementsBinding?=null
     private val binding get() = _binding!!
@@ -32,15 +34,17 @@ class PostsFragment : Fragment() {
         _binding= FragmentAnnouncementsBinding.inflate(inflater, container, false)
 
 
-        // Push the data to Firebase
+        var args=arguments
         setupRecyclerView()
+        var coursework=args?.getParcelable<Coursework>(Constants.COURSEWORK_RESULT_KEY) as Coursework
+        requestData(coursework.ClassID)
         return binding.root
     }
 
     private fun setupRecyclerView() {
         binding.announcementRv.adapter=announcementAdapter
         binding.announcementRv.layoutManager=LinearLayoutManager(requireContext())
-        requestData("IT-E")
+
     }
 
     private fun requestData(classID: String) {

@@ -15,7 +15,6 @@ data class Subjects(
     @SerializedName("SubjectDescription")
     val SubjectDescription: String,
 
-
     @SerializedName("LECTURE_ID")
     val LECTURE_ID: String,
 

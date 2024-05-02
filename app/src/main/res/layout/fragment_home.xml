@@ -13,9 +13,7 @@
         android:layout_width="0dp"
 
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/redblue_gradient"
+        android:background="@drawable/rbc_rec"
         android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,10 +25,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="6dp"
             android:padding="2dp"
             android:text="Madhav Sharma"
-            android:textColor="@color/Cream"
+            android:textColor="@color/white"
             android:textSize="40sp"
             app:fontFamily="@font/baloo_paaji_2_extrabold"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,9 +39,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:text="Greetings"
-            android:textColor="@color/Greyish"
+            android:textColor="@color/mixred"
             android:textSize="25sp"
             app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +51,7 @@
             android:id="@+id/profile_picture"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@drawable/hia"
+            android:src="@drawable/house"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/greeting_value"
@@ -66,12 +64,11 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="7dp"
         android:background="@drawable/rounded_bottom_rectangle"
         android:padding="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
 
         <SearchView
@@ -88,7 +85,7 @@
             android:id="@+id/class_searchmic"
             android:layout_width="50dp"
             android:layout_height="0dp"
-            android:src="@drawable/microphone"
+            android:src="@drawable/microphone2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -101,23 +98,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Classes"
-        android:textColor="@color/dark"
-        android:textSize="30sp"
-        app:fontFamily="@font/barlow_extrabold"
+        android:padding="5dp"
+        android:text="All Classes"
+        android:background="@drawable/ct_rec_bg"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        app:fontFamily="@font/mazzardbold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardcontainer" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:src="@drawable/class_2108926"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.628" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/classRV"
@@ -135,14 +123,13 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView8"
         android:layout_width="40dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="7dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/filter"
         app:civ_border_color="@color/ShadeofDark"
         app:civ_border_width="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/searchbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/searchbar" />
+        app:layout_constraintBottom_toTopOf="@+id/searchbar"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

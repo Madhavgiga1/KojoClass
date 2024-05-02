@@ -38,8 +38,8 @@
         android:label="activity_details"
         tools:layout="@layout/activity_details" >
         <argument
-            android:name="SubjectLectureID"
-            app:argType="string" />
+            android:name="coursework"
+            app:argType="com.example.reater.models.Coursework" />
     </activity>
     <fragment
         android:id="@+id/userProfileFragment"

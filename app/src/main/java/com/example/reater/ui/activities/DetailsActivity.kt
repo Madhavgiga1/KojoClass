@@ -2,7 +2,6 @@ package com.example.reater.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.navArgs
@@ -10,16 +9,19 @@ import androidx.viewpager.widget.ViewPager
 import com.example.reater.R
 import com.example.reater.adapters.PagerAdapter
 import com.example.reater.ui.fragments.SubjectDetail.FilesFragment
-import com.example.reater.ui.fragments.SubjectDetail.PostsFragment
+import com.example.reater.ui.fragments.SubjectDetail.AnnouncementFragment
 import com.google.android.material.tabs.TabLayout
 import java.util.ArrayList
 
 class DetailsActivity : AppCompatActivity() {
-    //private val args by navArgs<DetailsActivityArgs>()
+    private val args:DetailsActivityArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_details)
+
         var viewpager=findViewById<ViewPager>(R.id.viewPager)
         var tablayout=findViewById<TabLayout>(R.id.tabLayout)
         var toolbar=findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
@@ -30,7 +32,7 @@ class DetailsActivity : AppCompatActivity() {
         //setSupportActionBar(toolbar)
 
         val fragments = ArrayList<Fragment>()
-        fragments.add(PostsFragment())
+        fragments.add(AnnouncementFragment())
         fragments.add(FilesFragment())
 
 
@@ -39,7 +41,7 @@ class DetailsActivity : AppCompatActivity() {
         titles.add("Files")
 
         val resultBundle = Bundle()
-       // resultBundle.putString("recipeBundle", args.subjectLectureID)
+        resultBundle.putParcelable("courseworkBundle",args.coursework)
 
         val pagerAdapter=PagerAdapter(resultBundle,fragments,titles,supportFragmentManager)
 

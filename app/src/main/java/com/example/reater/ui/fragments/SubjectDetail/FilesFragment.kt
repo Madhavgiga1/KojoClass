@@ -10,7 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.reater.adapters.FilesAdapter
 import com.example.reater.databinding.FragmentFilesBinding
+import com.example.reater.models.Coursework
 import com.example.reater.models.StudyMaterial
+import com.example.reater.utils.Constants.Companion.COURSEWORK_RESULT_KEY
 import com.example.reater.utils.NetworkResult
 import com.example.reater.viewmodels.FirebaseViewmodel
 import com.google.firebase.database.DatabaseReference
@@ -34,39 +36,17 @@ class FilesFragment : Fragment() {
 
 
         _binding= FragmentFilesBinding.inflate(inflater, container,false)
-        /*val database: DatabaseReference = FirebaseDatabase.getInstance().reference
-        val studymaterials = listOf(
-            StudyMaterial(
-                "Process Scheduling",
-                "2024-04-27 10:00 AM",
-                "Veena Khandelwal",
-                "https://firebasestorage.googleapis.com/v0/b/kojoclass-c293e.appspot.com/o/veena%20mam.jpeg?alt=media&token=481b455d-2512-4822-8fd8-a1406010baa2\"",
-                "https://firebasestorage.googleapis.com/v0/b/kojoclass-c293e.appspot.com/o/Understanding_IAM_For_Cloud_Full.pdf?alt=media&token=93446e82-2d32-4238-a94b-be7736dec029"
-            ),
-            StudyMaterial(
-                "Process Synchronisation",
-                "2024-04-27 10:00 AM",
-                "Veena Khandelwal",
-                "https://firebasestorage.googleapis.com/v0/b/kojoclass-c293e.appspot.com/o/veena%20mam.jpeg?alt=media&token=481b455d-2512-4822-8fd8-a1406010baa2\"",
-                "https://firebasestorage.googleapis.com/v0/b/kojoclass-c293e.appspot.com/o/Understanding_IAM_For_Cloud_Full.pdf?alt=media&token=93446e82-2d32-4238-a94b-be7736dec029"
-            ),
-            StudyMaterial(
-                "Page Replacement Algo",
-                "2024-04-27 10:00 AM",
-                "Veena Khandelwal",
-                "https://firebasestorage.googleapis.com/v0/b/kojoclass-c293e.appspot.com/o/veena%20mam.jpeg?alt=media&token=481b455d-2512-4822-8fd8-a1406010baa2\"",
-                "https://firebasestorage.googleapis.com/v0/b/kojoclass-c293e.appspot.com/o/Understanding_IAM_For_Cloud_Full.pdf?alt=media&token=93446e82-2d32-4238-a94b-be7736dec029"
-            )
-        )
-        database.child("IT-E").child("StudyMaterial").setValue(studymaterials)*/
+        var args=arguments
         setupRecyclerView()
+        var coursework=args?.getParcelable<Coursework>(COURSEWORK_RESULT_KEY) as Coursework
+        requestData(coursework.ClassID)
         return binding.root
     }
 
     private fun setupRecyclerView() {
         binding.fileRV.adapter=filesAdapter
         binding.fileRV.layoutManager= LinearLayoutManager(requireContext())
-        requestData("IT-E")
+
     }
 
     private fun requestData(classID: String) {

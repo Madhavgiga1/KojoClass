@@ -3,7 +3,7 @@ package com.example.reater.utils
 class Constants {
     companion object{
         const val BASE_URL=""
-
+        const val COURSEWORK_RESULT_KEY="courseworkBundle"
         const val PREFS_TOKEN_FILE="PREFS_TOKEN_FILE"
         val DEGREE_MAP = mapOf(
             "B.Tech Information Technology" to "100",
