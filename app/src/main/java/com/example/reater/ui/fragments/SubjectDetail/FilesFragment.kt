@@ -36,10 +36,13 @@ class FilesFragment : Fragment() {
 
 
         _binding= FragmentFilesBinding.inflate(inflater, container,false)
+
         var args=arguments
-        setupRecyclerView()
-        var coursework=args?.getParcelable<Coursework>(COURSEWORK_RESULT_KEY) as Coursework
-        requestData(coursework.ClassID)
+         setupRecyclerView()
+         var coursework=args?.getParcelable<Coursework>(COURSEWORK_RESULT_KEY) as Coursework
+
+         requestData(coursework.ClassID,coursework.SubjectID)
+
         return binding.root
     }
 
@@ -49,8 +52,8 @@ class FilesFragment : Fragment() {
 
     }
 
-    private fun requestData(classID: String) {
-        firebaseViewmodel.getStudyMaterials(classID)
+    private fun requestData(classID: String,subjectID: String) {
+        firebaseViewmodel.getStudyMaterials(classID,subjectID)
         firebaseViewmodel.filesResponse.observe(viewLifecycleOwner,{ response->
             when(response){
                 is NetworkResult.Success->{
@@ -77,5 +80,7 @@ class FilesFragment : Fragment() {
             }
         })
     }
+
+
 
 }

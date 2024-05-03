@@ -18,8 +18,8 @@ class FirebaseViewmodel:ViewModel() {
     var filesResponse:MutableLiveData<NetworkResult<List<StudyMaterial>>> = MutableLiveData()
 
 
-    fun SendAnnouncementsRequest(classid: String) {
-        var post=database.child(classid).child("Announcements")
+    fun getAnnouncementsRequest(classid: String, subjectID:String) {
+        var post=database.child("Announcements").child(classid).child(subjectID)
 
         post.addValueEventListener(object:ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -38,8 +38,8 @@ class FirebaseViewmodel:ViewModel() {
         })
     }
 
-    fun getStudyMaterials(classid:String){
-        var materiallocation=database.child(classid).child("StudyMaterial")
+    fun getStudyMaterials(classid:String,subjectID: String){
+        var materiallocation=database.child("StudyMaterial").child(classid).child(subjectID)
 
         materiallocation.addValueEventListener(object:ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {

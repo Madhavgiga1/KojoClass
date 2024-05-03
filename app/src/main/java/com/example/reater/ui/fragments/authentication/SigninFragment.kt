@@ -33,9 +33,12 @@ class SigninFragment : Fragment() {
         _binding= FragmentSigninBinding.inflate(inflater, container, false)
         binding.progressBar.visibility=View.INVISIBLE
         binding.loginbox.setOnClickListener {
-            var enrollment=binding.emailEditText.text.toString()
+            /*var enrollment=binding.emailEditText.text.toString()
             var password=binding.passwordEditText.text.toString()
-            loginStudent(LoginRequest(enrollment,password))
+            loginStudent(LoginRequest(enrollment,password))*/
+            var intent=Intent(requireContext(),MainActivity::class.java)
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent)
         }
         return binding.root
     }
@@ -58,7 +61,7 @@ class SigninFragment : Fragment() {
                     binding.progressBar.visibility=View.INVISIBLE
                     Toast.makeText(requireContext(),"Successfully Logged In ",Toast.LENGTH_SHORT).show()
                     var intent=Intent(requireContext(),MainActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent)
 
 

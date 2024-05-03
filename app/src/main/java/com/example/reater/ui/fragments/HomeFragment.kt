@@ -10,9 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.reater.R
 import com.example.reater.adapters.ClassAdapter
 import com.example.reater.databinding.FragmentHomeBinding
+import com.example.reater.models.Coursework
 import com.example.reater.utils.NetworkResult
 import com.example.reater.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,15 +41,25 @@ class HomeFragment : Fragment() {
         binding.cardcontainer.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_userProfileFragment)
         }
-        //setupRecyclerView()
-        requestAPIData()
+        val courses = listOf(
+            Coursework("IT2101", "COMPUTER-NETWORKS", "IT-E", "TID001", "Dr. Sudhir Sharma", "4", "3rd Semester", "JUL-NOV 2021"),
+            Coursework("IT2104", "DATA COMMUNICATIONS (PC-4)", "IT-E", "TID0054", "Dr. Pankaj Vyas", " ", "5th Semester", "JUL-NOV 2021"),
+            Coursework("IT2130", "Fundamentals of DataScience", "IT-E", "TID0052", "Dr. Veena Khandelwal", "1", "3rd Semester", "JUL-NOV 2022"),
+            Coursework("IT2131", "Operating Systems", "IT-E", "TID005", "Dr. Devesh Choudhary", " ", "4th Semester", "JUL-NOV 2022"),
+            Coursework("MA2101", "ENGINEERING MATHEMATICS – III", "IT-E", "TID001", "Dr. Sudhir Sharma", " ", "5th Semester", "JUL-NOV 2022")
+        )
+
+        setupRecyclerView()
+        mAdapter.setData(courses)
+        //requestAPIData(courses)
 
         return binding.root
     }
 
     private fun setupRecyclerView() {
         binding.classRV.adapter = mAdapter
-        binding.classRV.layoutManager= GridLayoutManager(requireContext(),2)
+        binding.classRV.layoutManager= LinearLayoutManager(requireContext())
+
     }
 
     private fun requestAPIData(){
@@ -67,7 +79,7 @@ class HomeFragment : Fragment() {
 
                 is NetworkResult.Success->{
                     response.data?.let {
-
+                        //mAdapter.classlist=c
                     }
                 }
             }

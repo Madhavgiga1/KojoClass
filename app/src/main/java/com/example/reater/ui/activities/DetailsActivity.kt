@@ -29,7 +29,7 @@ class DetailsActivity : AppCompatActivity() {
         toolbar.title = "Subject Details"
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
 
-        //setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar)
 
         val fragments = ArrayList<Fragment>()
         fragments.add(AnnouncementFragment())
@@ -41,7 +41,7 @@ class DetailsActivity : AppCompatActivity() {
         titles.add("Files")
 
         val resultBundle = Bundle()
-        resultBundle.putParcelable("courseworkBundle",args.coursework)
+       resultBundle.putParcelable("courseworkBundle",args.coursework)
 
         val pagerAdapter=PagerAdapter(resultBundle,fragments,titles,supportFragmentManager)
 
