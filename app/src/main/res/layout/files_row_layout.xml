@@ -44,8 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
             android:layout_marginTop="16dp"
-            android:padding="5dp"
             android:text="@{individual_studymaterial.filename}"
+            android:padding="5dp"
+
             android:textColor="@color/ShadeofDark"
             android:textSize="20sp"
             app:fontFamily="@font/mazzardbold"
