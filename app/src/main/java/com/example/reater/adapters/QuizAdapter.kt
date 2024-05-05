@@ -4,25 +4,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.reater.databinding.AssigmentRowLayoutBinding
 import com.example.reater.databinding.FilesRowLayoutBinding
-import com.example.reater.models.Assignment
+import com.example.reater.databinding.QuizRowLayoutBinding
+import com.example.reater.models.Quiz
 import com.example.reater.models.StudyMaterial
 import com.example.reater.utils.GenericDiffUtil
 
-class AssignmentAdapter: RecyclerView.Adapter<AssignmentAdapter.MyViewHolder>() {
+class QuizAdapter: RecyclerView.Adapter<QuizAdapter.MyViewHolder>() {
 
-    private var assignments= emptyList<Assignment>()
-    class MyViewHolder(private val binding: AssigmentRowLayoutBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(current_assignment: Assignment){
-            binding.currentAssignment=current_assignment
+    private var quizzes= emptyList<Quiz>()
+    class MyViewHolder(private val binding: QuizRowLayoutBinding) : RecyclerView.ViewHolder(binding.root){
+        fun bind(current_quiz: Quiz){
+            binding.currentQuiz=current_quiz
             binding.executePendingBindings()
         }
-
         companion object{
             fun from(parent: ViewGroup):MyViewHolder{
                 var layoutInflater= LayoutInflater.from(parent.context)
-                var binding= AssigmentRowLayoutBinding.inflate(layoutInflater,parent,false)
+                var binding= QuizRowLayoutBinding.inflate(layoutInflater,parent,false)
                 return MyViewHolder(binding)
             }
 
@@ -33,19 +32,19 @@ class AssignmentAdapter: RecyclerView.Adapter<AssignmentAdapter.MyViewHolder>() 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val current_assignment = assignments[position]
-        holder.bind(current_assignment)
+        val current_quiz = quizzes[position]
+        holder.bind(current_quiz)
     }
 
     override fun getItemCount(): Int {
-        return assignments.size
+        return quizzes.size
     }
 
-    fun setData(newData: List<Assignment>){
+    fun setData(newData: List<Quiz>){
         val announcementsDiffUtil =
-            GenericDiffUtil(assignments, newData)
+            GenericDiffUtil(quizzes, newData)
         val diffUtilResult = DiffUtil.calculateDiff(announcementsDiffUtil)
-        assignments = newData
+        quizzes = newData
         diffUtilResult.dispatchUpdatesTo(this)
     }
 

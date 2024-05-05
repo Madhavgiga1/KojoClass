@@ -9,7 +9,14 @@
         android:id="@+id/quizFragment"
         android:name="com.example.reater.ui.fragments.QuizFragment"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_ongoingQuizActivity"
+            app:destination="@id/ongoingQuizActivity" />
+        <action
+            android:id="@+id/action_quizFragment_to_ongoingQuizFragment"
+            app:destination="@id/ongoingQuizFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.reater.ui.fragments.HomeFragment"
@@ -26,12 +33,11 @@
         android:id="@+id/assignmentFragment"
         android:name="com.example.reater.ui.fragments.AssignmentFragment"
         android:label="fragment_assignment"
-        tools:layout="@layout/fragment_assignment" />
-    <fragment
-        android:id="@+id/notesFragment"
-        android:name="com.example.reater.ui.fragments.NotesFragment"
-        android:label="fragment_notes"
-        tools:layout="@layout/fragment_notes" />
+        tools:layout="@layout/fragment_assignment" >
+        <action
+            android:id="@+id/action_assignmentFragment_to_assignmentDetailsFragment"
+            app:destination="@id/assignmentDetailsFragment" />
+    </fragment>
     <activity
         android:id="@+id/detailsActivity"
         android:name="com.example.reater.ui.activities.DetailsActivity"
@@ -46,4 +52,33 @@
         android:name="com.example.reater.ui.fragments.UserProfileFragment"
         android:label="fragment_user_profile"
         tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/assignmentDetailsFragment"
+        android:name="com.example.reater.ui.fragments.AssignmentDetailsFragment"
+        android:label="AssignmentDetailsFragment" >
+        <argument
+            android:name="assignment"
+            app:argType="com.example.reater.models.Assignment" />
+    </fragment>
+    <activity
+        android:id="@+id/ongoingQuizActivity"
+        android:name="com.example.reater.ui.activities.OngoingQuizActivity"
+        android:label="OngoingQuizActivity" >
+        <argument
+            android:name="quiz"
+            app:argType="com.example.reater.models.Quiz" />
+    </activity>
+    <fragment
+        android:id="@+id/ongoingQuizFragment"
+        android:name="com.example.reater.ui.fragments.OngoingQuizFragment"
+        android:label="OngoingQuizFragment" >
+        <argument
+            android:name="quiz"
+            app:argType="com.example.reater.models.Quiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment2"
+        android:name="com.example.reater.ui.fragments.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" />
 </navigation>

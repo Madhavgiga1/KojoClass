@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="assignment"
+            type="com.example.reater.models.Assignment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/maybecyant"
         tools:context=".ui.fragments.AssignmentDetailsFragment" >
 
         <TextView
@@ -17,11 +21,11 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:background="@drawable/rbc_rec"
-            android:gravity="center|Start"
+            android:gravity="center"
             android:padding="10dp"
             android:text="Assignment Details"
             android:textColor="@color/Cream"
-            android:textSize="16sp"
+            android:textSize="25sp"
             app:fontFamily="@font/mazzardextrabold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +54,7 @@
             android:textColor="@color/lightdarkblue"
             android:textSize="14sp"
             app:fontFamily="@font/barlow_extrabold"
-            android:text="TextView"
+            android:text="@{assignment.dueDate}"
             app:layout_constraintBottom_toBottomOf="@+id/textView37"
             app:layout_constraintStart_toEndOf="@+id/textView37"
             app:layout_constraintTop_toTopOf="@+id/textView37" />
@@ -61,13 +65,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
-            android:text="Instructions"
             android:padding="3dp"
+            android:text="Instructions"
             android:textColor="@color/dark"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <TextView
             android:id="@+id/textView42"
@@ -77,6 +81,7 @@
             android:padding="3dp"
             android:textColor="@color/ShadeofDark"
             android:textSize="14sp"
+            android:text="@{assignment.instructions}"
             app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,11 +92,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
-            android:text="Reference Materials"
+            android:layout_marginTop="24dp"
             android:padding="3dp"
+            android:text="Reference Materials"
             android:textColor="@color/greenishbg"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView42" />
@@ -141,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:padding="3dp"
             android:text="My Work"
             android:textColor="@color/greenishbg"
@@ -229,5 +234,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/assignment_upload_box" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="13dp"
+            android:text="SubjectID"
+            android:padding="3dp"
+            android:textColor="@color/anotherbgcolor"
+            android:textSize="14sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="9dp"
+            android:text="@{assignment.subjectid}"
+            android:padding="3dp"
+
+            android:textColor="@color/ShadeofDark"
+            android:textSize="14sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

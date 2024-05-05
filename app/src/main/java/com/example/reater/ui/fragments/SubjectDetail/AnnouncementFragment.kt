@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.reater.R
 import com.example.reater.adapters.AnnouncementsAdapter
 import com.example.reater.databinding.FragmentAnnouncementsBinding
 import com.example.reater.models.Announcement
@@ -16,7 +15,6 @@ import com.example.reater.models.Coursework
 import com.example.reater.utils.Constants
 import com.example.reater.utils.NetworkResult
 import com.example.reater.viewmodels.FirebaseViewmodel
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class AnnouncementFragment : Fragment() {
@@ -33,11 +31,15 @@ class AnnouncementFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding= FragmentAnnouncementsBinding.inflate(inflater, container, false)
 
-
         var args=arguments
         setupRecyclerView()
         var coursework=args?.getParcelable<Coursework>(Constants.COURSEWORK_RESULT_KEY) as Coursework
-        requestData(coursework.ClassID)
+
+
+
+
+        requestData(coursework.ClassID,coursework.SubjectID)
+
         return binding.root
     }
 
@@ -47,8 +49,8 @@ class AnnouncementFragment : Fragment() {
 
     }
 
-    private fun requestData(classID: String) {
-        firebaseViewmodel.SendAnnouncementsRequest(classID)
+    private fun requestData(classID: String,subjectID:String) {
+        firebaseViewmodel.getAnnouncementsRequest(classID,subjectID)
         firebaseViewmodel.AnnouncementsResponse.observe(viewLifecycleOwner,{response->
             when(response){
                 is NetworkResult.Success->{

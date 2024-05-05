@@ -1,10 +1,13 @@
 package com.example.reater.utils
 
+import com.example.reater.models.Question
+import com.example.reater.models.Quiz
+
 class Constants {
-    companion object{
-        const val BASE_URL=""
-        const val COURSEWORK_RESULT_KEY="courseworkBundle"
-        const val PREFS_TOKEN_FILE="PREFS_TOKEN_FILE"
+    companion object {
+        const val BASE_URL = ""
+        const val COURSEWORK_RESULT_KEY = "courseworkBundle"
+        const val PREFS_TOKEN_FILE = "PREFS_TOKEN_FILE"
         val DEGREE_MAP = mapOf(
             "B.Tech Information Technology" to "100",
             "B.Tech Computer Science" to "200",
@@ -31,6 +34,8 @@ class Constants {
             "B. Com. (Hons)" to "2300"
             // Add more degrees here
         )
-    }
 
+
+
+    }
 }

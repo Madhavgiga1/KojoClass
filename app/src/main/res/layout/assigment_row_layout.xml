@@ -4,11 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="current_assignment"
+            type="com.example.reater.models.Assignment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        onAssignmentClickListener="@{current_assignment}"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_bottom_rectangle">
 
@@ -37,7 +42,7 @@
 
             android:layout_marginStart="8dp"
             android:padding="5dp"
-            android:text="2 September"
+            android:text="@{current_assignment.dueDate}"
             android:textColor="@color/ShadeofDark"
             app:fontFamily="@font/mazzardbold"
             app:layout_constraintBottom_toBottomOf="@+id/textView2"
@@ -66,7 +71,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:padding="3dp"
-            android:text="PSUC Assigment"
+            android:text="@{current_assignment.assignmentName}"
             android:textColor="@color/greenishbg"
             android:textSize="17sp"
             app:fontFamily="@font/mazzardbold"
@@ -99,7 +104,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:padding="5dp"
-            android:text="IT2137"
+            android:text="@{current_assignment.subjectid}"
             android:textColor="@color/greenishbg"
             android:textSize="16sp"
             app:fontFamily="@font/barlow_extrabold"

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="question"
+            type="com.example.reater.models.Question" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.OngoingQuizFragment">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+
+                </androidx.appcompat.widget.Toolbar>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/ct_rec_bg"
+                    android:padding="7dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="88dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+
+                        android:contentDescription="Quiz Name"
+                        android:src="@drawable/house"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/quiz_name_ongoing" />
+
+                    <TextView
+                        android:id="@+id/quiz_name_ongoing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Process Scheduling Quiz"
+                        android:textColor="@color/Cream"
+                        android:textSize="20sp"
+                        app:fontFamily="@font/mazzardextrabold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="7dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:minHeight="25dp"
+
+                        android:progress="50"
+                        android:progressBackgroundTint="@color/ShadeofDark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toBottomOf="@+id/quiz_name_ongoing" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="Progress"
+                        android:textColor="@color/mixred"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/mazzardextrabold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+
+                    <TextView
+                        android:id="@+id/editTextTime"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+
+                        android:textColor="@color/mixred"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/mazzardextrabold"
+                        android:inputType="time"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView19"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Question"
+                    android:textColor="@color/ShadeofDark"
+                    android:textSize="17sp"
+                    app:fontFamily="@font/mazzardextrabold" />
+
+                <TextView
+                    android:background="@drawable/lcr"
+                    android:id="@+id/textView36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"
+                    android:padding="7dp"
+                    android:text="@{question.questiontext}"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/mazzardextrabold" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ship"
+                    app:tintMode="screen"
+                    tools:srcCompat="@drawable/studyanother" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/radio_btn_unselected"
+                        android:fontFamily="@font/mazzardbold"
+                        android:padding="3dp"
+                        android:text="@{question.qOption1}"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/radio_btn_unselected"
+                        android:fontFamily="@font/mazzardbold"
+                        android:padding="3dp"
+                        android:text="@{question.qOption2}"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/radio_btn_unselected"
+                        android:fontFamily="@font/mazzardbold"
+                        android:padding="3dp"
+                        android:text="@{question.qOption3}"
+                        android:textSize="17sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/radio_btn_unselected"
+                        android:fontFamily="@font/mazzardbold"
+                        android:padding="3dp"
+                        android:text="@{question.qOption4}"
+                        android:textSize="17sp" />
+
+
+                    <!-- Add other RadioButtons here -->
+
+                </RadioGroup>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/previous_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/radio_btn_unselected"
+                        android:padding="10dp"
+                        android:text="Previous"
+                        android:textColor="@color/BalticSeabgcolor"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/mazzardextrabold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/next_question"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/next_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="80dp"
+                        android:background="@drawable/ct_rec_bg"
+                        android:padding="10dp"
+                        android:text="Next Question"
+                        android:textColor="@color/Cream"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/mazzardextrabold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextureView
+                    android:id="@+id/textureView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

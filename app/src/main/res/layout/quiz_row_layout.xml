@@ -4,14 +4,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="current_quiz"
+            type="com.example.reater.models.Quiz" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
         android:id="@+id/title_holder"
+        android:layout_marginHorizontal="10dp"
+        onQuizClickActivityListener="@{current_quiz}"
+        android:layout_marginVertical="5dp"
         android:background="@drawable/rounded_bottom_rectangle"
+
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,9 +31,10 @@
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="40dp"
+                android:layout_width="50dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -37,11 +44,12 @@
                 android:id="@+id/quiz_name"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="10dp"
-                android:gravity="center|start"
-                android:text="Memory Management"
+                android:layout_marginStart="8dp"
+                android:gravity="start|center"
+                android:text="@{current_quiz.subjectId}"
                 android:textColor="@color/Cream"
-                android:textSize="16sp"
+
+                android:textSize="21sp"
                 app:fontFamily="@font/mazzardextrabold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -64,16 +72,16 @@
             android:id="@+id/textView15"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="6dp"
             android:layout_marginEnd="5dp"
-            android:text="TextView"
+            android:text="@{current_quiz.quizname}"
             android:textColor="@color/ShadeofDark"
-            android:textSize="14sp"
+            android:textSize="17sp"
             app:fontFamily="@font/mazzardbold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
         <TextView
             android:id="@+id/textView17"
@@ -93,7 +101,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="TextView"
+
+            android:text="@{current_quiz.quizSchedule}"
             android:textColor="@color/ShadeofDark"
             android:textSize="14sp"
             app:fontFamily="@font/mazzardbold"
@@ -120,9 +129,10 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="5dp"
-            android:text="TextView"
+            android:text="@{current_quiz.quizDuration}"
             android:textColor="@color/ShadeofDark"
             android:textSize="14sp"
+
             app:fontFamily="@font/mazzardbold"
             app:layout_constraintBottom_toBottomOf="@+id/textView29"
             app:layout_constraintStart_toEndOf="@+id/textView29"
@@ -146,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
-            android:text="TextView"
+            android:text="@{String.valueOf(current_quiz.quizList.size())}"
             android:textColor="@color/ShadeofDark"
             android:textSize="14sp"
             app:fontFamily="@font/mazzardbold"
@@ -171,10 +181,13 @@
         <TextView
             android:id="@+id/syllabus_value"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
-            android:padding="4dp"
-            android:text="Here is the syllabus everyone"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:text="@{current_quiz.syllabus}"
             android:textColor="@color/ShadeofDark"
             android:textSize="13sp"
             app:fontFamily="@font/fredoka_one"
