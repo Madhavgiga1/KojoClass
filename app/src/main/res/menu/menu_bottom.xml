@@ -17,7 +17,7 @@
         android:icon="@drawable/homework"/>
 
     <item
-        android:id="@+id/notesFragment"
+        android:id="@+id/notesFragment2"
         android:title="@string/menu_Notes"
         android:icon="@drawable/wirte"/>
 

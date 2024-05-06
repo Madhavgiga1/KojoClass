@@ -5,10 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.reater.R
+import androidx.navigation.fragment.navArgs
+import com.example.reater.databinding.FragmentAssignmentDetailsBinding
 
 
 class AssignmentDetailsFragment : Fragment() {
+    private var _binding:FragmentAssignmentDetailsBinding?=null
+    private val binding get() = _binding!!
+    private val args: AssignmentDetailsFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,8 +23,15 @@ class AssignmentDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_assignment__description, container, false)
+
+        _binding= FragmentAssignmentDetailsBinding.inflate(inflater, container,false)
+        binding.assignment=args.assignment
+        binding.assignmentSubmitButton.setOnClickListener{
+            binding.assignmentUploadBox.visibility=View.VISIBLE
+
+        }
+
+        return binding.root
     }
 
 }
