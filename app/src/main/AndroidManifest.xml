@@ -14,21 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Reater">
         <activity
+            android:name=".teacherapp.Teacher_Login_Activity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.OngoingQuizActivity"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".ui.activities.AuthenticationActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".ui.activities.DetailsActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">
