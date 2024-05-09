@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="newAssignment"
+            type="com.example.reater.models.Assignment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.fragments.CreateAssignmentFragment">
+
+        <TextView
+            android:id="@+id/create_assignment_title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/lcr"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Create Assignment"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:fontFamily="@font/mazzardbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_section_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:padding="3dp"
+            android:text="Section ID:"
+            android:textColor="@color/anotherbgcolor"
+            android:textSize="16sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/create_assignment_title" />
+
+        <EditText
+            android:id="@+id/edit_section_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter Section ID"
+            android:inputType="text"
+
+            android:textColor="@color/lightdarkblue"
+            android:textSize="16sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_section_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_section_id"
+            app:layout_constraintTop_toTopOf="@+id/textView_section_id" />
+
+        <TextView
+            android:id="@+id/textView_assignment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="3dp"
+            android:text="Assignment Name:"
+            android:textColor="@color/anotherbgcolor"
+            android:textSize="16sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_section_id" />
+
+        <EditText
+            android:id="@+id/created_assignment_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter Assignment Name"
+            android:inputType="text"
+
+            android:textColor="@color/lightdarkblue"
+            android:textSize="16sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_assignment_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_assignment_name"
+            app:layout_constraintTop_toTopOf="@+id/textView_assignment_name" />
+
+        <TextView
+            android:id="@+id/textView_assignment_instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="3dp"
+            android:text="Instructions:"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/created_assignment_name" />
+
+        <EditText
+            android:id="@+id/edit_assignment_instructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rec_round_bg"
+            android:gravity="start|top"
+            android:hint="Enter Assignment Instructions"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="8dp"
+            android:text="@={newAssignment.instructions}"
+            android:textColor="@color/ShadeofDark"
+            android:textSize="16sp"
+            app:fontFamily="@font/mazzardbold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_assignment_instructions" />
+
+        <TextView
+            android:id="@+id/textView_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="3dp"
+            android:text="Due Date:"
+            android:textColor="@color/anotherbgcolor"
+            android:textSize="16sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_assignment_instructions" />
+
+        <EditText
+            android:id="@+id/edit_due_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Select Due Date"
+            android:inputType="date"
+            android:text="@={newAssignment.dueDate}"
+            android:textColor="@color/lightdarkblue"
+            android:textSize="16sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_due_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_due_date"
+            app:layout_constraintTop_toTopOf="@+id/textView_due_date" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/assignment_created_box"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+
+            android:layout_marginEnd="7dp"
+
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+            <ImageView
+                android:id="@+id/teacheruploaded_doc_filetype_icon"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/file"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/assignment_teacher_uploaded_filename"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:hint="Uploaded File Name"
+                android:padding="3dp"
+
+                android:text="Attached PDF"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:autoSizeMinTextSize="15sp"
+                app:fontFamily="@font/barlow_extrabold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/teacheruploaded_doc_filetype_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:padding="3dp"
+
+            android:text="Upload Assignment Document"
+            android:textColor="@color/dark"
+            android:textSize="20sp"
+            app:fontFamily="@font/barlow_extrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_due_date" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/teacher_upload_box"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/rec_round_bg"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView41"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView41"
+            app:layout_constraintTop_toTopOf="@+id/textView41">
+
+            <ImageView
+                android:id="@+id/imageView280"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/assignment_create_attach"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/assignment_create_attach"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:text="Attach"
+
+                android:textColor="@color/BalticSeabgcolor"
+                android:textSize="16sp"
+                app:fontFamily="@font/mazzardextrabold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView280"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView280" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="10dp"
+            app:strokeWidth="1dp"
+            android:padding="2dp"
+            app:strokeColor="@color/BalticSeabgcolor"
+            app:cardBackgroundColor="@color/yellow"
+            app:layout_constraintStart_toStartOf="parent">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:src="@drawable/house"
+                android:layout_margin="2dp"
+                >
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginStart="54dp"
+                android:padding="5dp"
+                android:text="Upload Assignment"
+                android:gravity="start|center"
+
+                android:textColor="@color/BalticSeabgcolor"
+                android:textSize="16sp"
+                app:fontFamily="@font/mazzardextrabold"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                >
+
+            </TextView>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

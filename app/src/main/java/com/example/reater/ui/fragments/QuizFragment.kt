@@ -38,6 +38,8 @@ class QuizFragment : Fragment() {
         var questionsList = listOf(
             Question(
                 qid = "Q1",
+                "General Knowledge",
+                "K23120",
                 Questiontext = "What is the square root of 64?",
                 qOption1 = "4",
                 qOption2 = "6",
@@ -47,6 +49,8 @@ class QuizFragment : Fragment() {
             ),
             Question(
                 qid = "Q2",
+                "General Knowledge",
+                "K23120",
                 Questiontext = "What is the capital of France?",
                 qOption1 = "London",
                 qOption2 = "Berlin",
@@ -56,6 +60,8 @@ class QuizFragment : Fragment() {
             ),
             Question(
                 qid = "Q3",
+                "General Knowledge",
+                "K23120",
                 Questiontext = "What is the chemical symbol for water?",
                 qOption1 = "H2O",
                 qOption2 = "CO2",
@@ -65,6 +71,8 @@ class QuizFragment : Fragment() {
             ),
             Question(
                 qid = "Q4",
+                "General Knowledge",
+                "K23120",
                 Questiontext = "Who wrote 'Romeo and Juliet'?",
                 qOption1 = "William Shakespeare",
                 qOption2 = "Charles Dickens",
@@ -74,6 +82,8 @@ class QuizFragment : Fragment() {
             ),
             Question(
                 qid = "Q5",
+                "General Knowledge",
+                "K23120",
                 Questiontext = "What is the largest planet in our solar system?",
                 qOption1 = "Earth",
                 qOption2 = "Mars",

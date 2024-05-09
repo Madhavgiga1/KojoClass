@@ -32,8 +32,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     >
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="50dp"
 
+                       android:padding="7dp"
+                       android:text="@{question.subjectName}"
+                       android:textColor="@color/black"
+                       android:textSize="18sp"
+                       app:fontFamily="@font/mazzardextrabold"
+                       android:gravity="center|start"
+                       >
+
+                   </TextView>
                 </androidx.appcompat.widget.Toolbar>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/lcr"
+                    android:layout_marginBottom="2dp"
+                    >
+
+                </View>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout3"
                     android:layout_width="match_parent"

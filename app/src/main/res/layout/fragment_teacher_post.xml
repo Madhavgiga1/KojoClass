@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".teacherapp.ui.fragments.TeacherPostFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/mixred"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view_header"
+                android:layout_width="44dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/register"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/text_view_header"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="Post a class Announcement"
+                android:textColor="@color/Cream"
+                android:textSize="20sp"
+
+                app:fontFamily="@font/mazzardextrabold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_view_header"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/poster_photo"
+        android:layout_width="105dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:civ_border_color="@color/reddie"
+        app:civ_border_width="1dp"
+        android:src="@drawable/house"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_header" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:padding="3dp"
+        android:text="SubjectID : "
+        android:textColor="@color/anotherbgcolor"
+        android:textSize="14sp"
+        app:fontFamily="@font/barlow_extrabold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sm_subname" />
+
+    <TextView
+        android:id="@+id/sm_teacherupload_subid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="3dp"
+
+        android:text="@{assignment.subjectid}"
+        android:textColor="@color/lightdarkblue"
+        android:textSize="14sp"
+        app:fontFamily="@font/mazzardextrabold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView51"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView51"
+        app:layout_constraintTop_toTopOf="@+id/textView51" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:padding="3dp"
+        android:text="Class ID : "
+        android:textColor="@color/anotherbgcolor"
+        android:textSize="14sp"
+        app:fontFamily="@font/barlow_extrabold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sm_teacherupload_subid" />
+
+    <TextView
+        android:id="@+id/teacher_sm_classid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="3dp"
+        android:text="@{assignment.teacher}"
+        android:textColor="@color/lightdarkblue"
+        android:textSize="14sp"
+        app:fontFamily="@font/barlow_extrabold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView70"
+        app:layout_constraintTop_toTopOf="@+id/textView70" />
+
+    <TextView
+        android:id="@+id/sm_subname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="3dp"
+        android:text="Subject Name :"
+        android:textColor="@color/anotherbgcolor"
+        android:textSize="14sp"
+        app:fontFamily="@font/barlow_extrabold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poster_photo" />
+
+    <TextView
+        android:id="@+id/teacher_sm_subname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="3dp"
+        android:text="@{assignment.teacher}"
+        android:textColor="@color/lightdarkblue"
+        android:textSize="14sp"
+        app:fontFamily="@font/mazzardextrabold"
+        app:layout_constraintBottom_toBottomOf="@+id/sm_subname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sm_subname"
+        app:layout_constraintTop_toTopOf="@+id/sm_subname" />
+
+    <TextView
+        android:id="@+id/poster_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Pankaj Agarwal"
+        android:textColor="@color/anotherbgcolor"
+        android:textSize="14sp"
+        app:fontFamily="@font/barlow_extrabold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poster_photo"
+        app:layout_constraintTop_toTopOf="@+id/poster_photo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/teacher_upload_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/rtc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/teacher_upload_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@drawable/rec_round_bg"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/teacher_upload_instruction_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/teacher_upload_instruction_text"
+            app:layout_constraintTop_toTopOf="@+id/teacher_upload_instruction_text">
+
+            <ImageView
+                android:id="@+id/teacher_upload_button_icon"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/down"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/teacher_upload_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:text="Upload"
+                android:textColor="@color/nice_blue"
+                android:textSize="16sp"
+                app:fontFamily="@font/mazzardextrabold"
+                app:layout_constraintBottom_toBottomOf="@+id/teacher_upload_button_icon"
+                app:layout_constraintStart_toEndOf="@+id/teacher_upload_button_icon"
+                app:layout_constraintTop_toTopOf="@+id/teacher_upload_button_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/teacher_upload_file_layout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:padding="3dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/teacher_SM_submit_button_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teacher_upload_button_layout">
+
+            <ImageView
+                android:id="@+id/teacher_uploaded_file_icon"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/file"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/teacher_uploaded_filename_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:hint="Uploaded File Name"
+                android:padding="3dp"
+                android:text="Upload a PDF"
+                android:textColor="@color/newblack"
+                android:textSize="16sp"
+                app:autoSizeMinTextSize="15sp"
+                app:fontFamily="@font/barlow_extrabold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/teacher_uploaded_file_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/teacher_SM_submit_button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
+            android:padding="5dp"
+            app:cardBackgroundColor="@color/yellow"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/BalticSeabgcolor"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView33"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/announcement"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center"
+                    android:text="Post! "
+                    android:textColor="@color/anotherbgcolor"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/barlow_extrabold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView33"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/teacher_upload_instruction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="11dp"
+            android:padding="2dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="You can upload an image too"
+            android:textColor="@color/good_black"
+            android:textSize="20sp"
+            app:fontFamily="@font/mazzardextrabold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Message for your class"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="@color/good_black"
+        android:padding="5dp"
+        android:textSize="12sp"
+        app:fontFamily="@font/mazzardbold"
+        app:layout_constraintBottom_toTopOf="@+id/teacher_upload_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView70"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

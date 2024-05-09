@@ -10,6 +10,12 @@ data class Question(
     @SerializedName("qid")
     var qid: String,
 
+    @SerializedName("subjectName")
+    var subjectName: String,
+
+    @SerializedName("SubjectID")
+    var subjectID: String,
+
     @SerializedName("Questiontext")
     var Questiontext: String,
 
