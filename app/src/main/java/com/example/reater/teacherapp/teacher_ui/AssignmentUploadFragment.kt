@@ -9,9 +9,6 @@ import android.view.ViewGroup
 
 class AssignmentUploadFragment : Fragment() {
 
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
