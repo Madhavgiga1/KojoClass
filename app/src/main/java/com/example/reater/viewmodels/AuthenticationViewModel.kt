@@ -9,10 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.reater.data.Repository
-import com.example.reater.models.LoginRequest
-import com.example.reater.models.LoginResponse
-import com.example.reater.models.SignupRequest
-import com.example.reater.models.Subjects
+import com.example.reater.models.*
 import com.example.reater.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -85,6 +82,48 @@ class AuthenticationViewModel @Inject constructor(private val repository: Reposi
         }
     }
 
+
+    var TeacherProfileResponse: MutableLiveData<NetworkResult<TeacherLoginResponse>> = MutableLiveData()
+
+
+    fun getTeacherProfile(loginRequest: LoginRequest) = viewModelScope.launch {
+        getTeacherProfileSafely(loginRequest)
+    }
+
+    private suspend fun getTeacherProfileSafely(loginRequest: LoginRequest) {
+        TeacherProfileResponse.value = NetworkResult.Loading()
+
+        if (hasInternetConnection()) {
+            try {
+                var response = repository.remote.LoginTeacher(loginRequest)
+                TeacherProfileResponse.value = handleTeacherProfileResponse(response)
+            }
+            catch (e: Exception) {
+                TeacherProfileResponse.value = NetworkResult.Error("Error Connecting to the API")
+            }
+
+        } else {
+            TeacherProfileResponse.value = NetworkResult.Error("No Internet Connection")
+        }
+    }
+
+    private fun handleTeacherProfileResponse(response: Response<TeacherLoginResponse>): NetworkResult<TeacherLoginResponse>? {
+        when {
+            response.message().toString().contains("timeout") -> {
+                return NetworkResult.Error("Timeout")
+            }
+            response.code() == 402 -> {
+                return NetworkResult.Error("API Key Limited.")
+            }
+            response.isSuccessful -> {
+                val teacherProfile = response.body()
+                return NetworkResult.Success(teacherProfile!!)
+            }
+            else -> {
+                return NetworkResult.Error(response.message())
+            }
+        }
+    }
 
     private fun hasInternetConnection(): Boolean {
         val connectivityManager = getApplication<Application>().getSystemService(

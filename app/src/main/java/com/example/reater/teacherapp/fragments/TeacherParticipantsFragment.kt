@@ -1,4 +1,4 @@
-package com.example.reater.teacherapp.teacher_ui.fragments
+package com.example.reater.teacherapp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

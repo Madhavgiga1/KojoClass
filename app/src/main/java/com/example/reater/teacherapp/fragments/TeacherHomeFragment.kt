@@ -1,4 +1,4 @@
-package com.example.reater.teacherapp.teacher_ui.fragments
+package com.example.reater.teacherapp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import com.example.reater.R
 
 
-class TeacherClassDetailsFragment : Fragment() {
-
+class TeacherHomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +22,6 @@ class TeacherClassDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teacher_class_details, container, false)
+        return inflater.inflate(R.layout.fragment_teacher_home, container, false)
     }
-
-
-
 }

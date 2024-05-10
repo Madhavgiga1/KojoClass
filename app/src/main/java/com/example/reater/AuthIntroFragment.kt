@@ -24,6 +24,9 @@ class AuthIntroFragment : Fragment() {
         binding.studentBox.setOnClickListener {
             findNavController().navigate(R.id.action_authIntroFragment_to_authHomeFragment)
         }
+        binding.teacherBox.setOnClickListener {
+            findNavController().navigate(R.id.action_authIntroFragment_to_teacherSigninFragment)
+        }
         return binding.root
     }
 

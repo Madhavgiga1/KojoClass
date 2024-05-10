@@ -13,21 +13,21 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
-            android:background="@color/dark"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
+            android:background="@color/dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/ClassNameID"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/ClassNameID"
                 android:gravity="center|start"
 
-                android:text="Class Name"
                 android:padding="7dp"
+                android:text="Class Name"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:fontFamily="@font/mazzardextrabold">
@@ -53,11 +53,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/lcr"
-            android:padding="2dp"
             android:gravity="center"
+            android:padding="2dp"
             android:text="Take Complete Control of your classes"
             android:textColor="@color/maybecyant"
-            android:textSize="14sp"
+            android:textSize="16sp"
             app:fontFamily="@font/mazzardextrabold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,19 +70,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
 
-            android:text="Mrs Veena Khandelwal"
             android:gravity="center"
             android:padding="3dp"
-            android:textColor="@color/yellow"
-            android:textSize="20sp"
-            app:fontFamily="@font/mazzardextrabold"
+            android:text="Mrs Veena Khandelwal"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:fontFamily="@font/barlow_extrabold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView56" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardViewA"
-            android:layout_width="200dp"
+            android:layout_width="190dp"
             app:strokeWidth="1dp"
             app:strokeColor="@color/brightgreen"
             app:cardBackgroundColor="@color/ShadeofDark"
@@ -145,16 +145,17 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardViewB"
             android:layout_width="0dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="@color/BalticSeabgcolor"
             android:layout_height="0dp"
-            app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="@color/mixred"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@color/mixred"
+            app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/cardViewA"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardViewA"
-            app:layout_constraintTop_toTopOf="@+id/cardViewA">
+            app:layout_constraintTop_toTopOf="@+id/cardViewA"
+            app:strokeColor="@color/BalticSeabgcolor"
+            app:strokeWidth="1dp">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -179,13 +180,13 @@
                 <ImageView
                     android:id="@+id/imageView39"
                     android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginTop="3dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView65"
-                    app:srcCompat="@drawable/doinghomework"
-                    android:layout_height="0dp"/>
+                    app:srcCompat="@drawable/doinghomework" />
 
                 <TextView
                     android:id="@+id/textView66"
@@ -206,13 +207,13 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardViewC"
-            android:layout_width="200dp"
+            android:layout_width="190dp"
             android:layout_height="240dp"
             android:layout_marginStart="8dp"
             app:strokeWidth="1dp"
             app:strokeColor="@color/BalticSeabgcolor"
             app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="@color/yellow"
+            app:cardBackgroundColor="@color/maybecyant"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardViewA">
@@ -246,19 +247,18 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView61"
-                    app:srcCompat="@drawable/student" />
+                    app:srcCompat="@drawable/books" />
 
                 <TextView
                     android:id="@+id/textView61"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Assignment Hub"
                     android:gravity="center"
                     android:padding="3dp"
+                    android:text="Assignment Hub"
                     android:textColor="@color/mixred"
-                    android:textSize="20sp"
-                    app:fontFamily="@font/mazzardextrabold"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/barlow_extrabold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView60" />

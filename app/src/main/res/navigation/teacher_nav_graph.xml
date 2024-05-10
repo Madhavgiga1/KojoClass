@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/teacher_nav_graph"
-    app:startDestination="@id/teacherClassDetailsFragment">
+    app:startDestination="@id/teacherHomeFragment">
 
     <fragment
         android:id="@+id/teacherClassDetailsFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherClassDetailsFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherClassDetailsFragment"
         android:label="TeacherClassDetailsFragment" >
 
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherHomeFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherHomeFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherHomeFragment"
         android:label="fragment_teacher_home"
         tools:layout="@layout/fragment_teacher_home" >
         <action
@@ -37,11 +37,11 @@
     </fragment>
     <fragment
         android:id="@+id/assignmentUploadFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.AssignmentUploadFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherAssignments.AssignmentUploadFragment"
         android:label="AssignmentUploadFragment" />
     <fragment
         android:id="@+id/teacherAssignmentFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherAssignmentFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherAssignments.TeacherAssignmentFragment"
         android:label="fragment_teacher_assignment"
         tools:layout="@layout/fragment_teacher_assignment" >
         <action
@@ -50,27 +50,27 @@
     </fragment>
     <fragment
         android:id="@+id/teacherPostFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherPostFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherPostFragment"
         android:label="fragment_teacher_post"
         tools:layout="@layout/fragment_teacher_post" />
     <fragment
         android:id="@+id/teacherQuizFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherQuizFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherQuiz.TeacherQuizFragment"
         android:label="fragment_teacher_quiz"
         tools:layout="@layout/fragment_teacher_quiz" />
     <fragment
         android:id="@+id/teacherParticipantsFragment2"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherParticipantsFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherParticipantsFragment"
         android:label="fragment_teacher_participants"
         tools:layout="@layout/fragment_teacher_participants" />
     <fragment
         android:id="@+id/addStudyMaterialFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.AddStudyMaterialFragment"
+        android:name="com.example.reater.teacherapp.fragments.AddStudyMaterialFragment"
         android:label="fragment_add_study_material"
         tools:layout="@layout/fragment_add_study_material" />
     <fragment
         android:id="@+id/studyMaterialsFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.StudyMaterialsFragment"
+        android:name="com.example.reater.teacherapp.fragments.StudyMaterialsFragment"
         android:label="fragment_study_materials"
         tools:layout="@layout/fragment_study_materials" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherAnnouncementsFragment"
-        android:name="com.example.reater.teacherapp.teacher_ui.fragments.TeacherAnnouncementsFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherAnnouncementsFragment"
         android:label="fragment_teacher_announcements"
         tools:layout="@layout/fragment_teacher_announcements" >
         <action
