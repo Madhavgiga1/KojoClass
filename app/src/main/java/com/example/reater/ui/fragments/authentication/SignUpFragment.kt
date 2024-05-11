@@ -17,13 +17,18 @@ import com.example.reater.models.Student
 import com.example.reater.ui.activities.MainActivity
 import com.example.reater.utils.Constants.Companion.DEGREE_MAP
 import com.example.reater.utils.NetworkResult
+import com.example.reater.utils.TokenManager
 import com.example.reater.viewmodels.AuthenticationViewModel
+import javax.inject.Inject
 
 class SignUpFragment : Fragment() {
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var authenticationViewModel: AuthenticationViewModel
+
+    @Inject
+    lateinit var tokenManager: TokenManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,6 +101,7 @@ class SignUpFragment : Fragment() {
                 is NetworkResult.Success->{
                     //binding.progressBar2.visibility=View.INVISIBLE
                     Toast.makeText(requireContext(),"Successfully Logged In ",Toast.LENGTH_SHORT).show()
+                    tokenManager.saveToken(response.data!!.token)
                     var intent= Intent(requireContext(), MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent)

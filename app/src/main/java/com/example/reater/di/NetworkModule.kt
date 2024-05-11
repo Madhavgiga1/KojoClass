@@ -1,6 +1,6 @@
 package com.example.reater.di
 
-import com.example.reater.data.network.KojoApi
+import com.example.reater.data.network.KojoStudentApi
 import com.example.reater.data.network.UserApi
 import dagger.Module
 import dagger.Provides
@@ -45,8 +45,8 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideKojoApi(retrofit: Retrofit): KojoApi {
-        return retrofit.create(KojoApi::class.java)
+    fun provideKojoApi(retrofit: Retrofit): KojoStudentApi {
+        return retrofit.create(KojoStudentApi::class.java)
     }
 
     @Singleton

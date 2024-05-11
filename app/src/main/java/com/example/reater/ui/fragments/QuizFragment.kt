@@ -96,7 +96,7 @@ class QuizFragment : Fragment() {
             Quiz(
                 "Monday",
                 "Mathematics",
-                "60 minutes",
+                "3",
                 "MATH101",
                 questionsList,
                 "Differential Equaitons Quiz",

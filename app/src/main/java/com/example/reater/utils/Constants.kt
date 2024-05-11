@@ -8,6 +8,9 @@ class Constants {
         const val BASE_URL = ""
         const val COURSEWORK_RESULT_KEY = "courseworkBundle"
         const val PREFS_TOKEN_FILE = "PREFS_TOKEN_FILE"
+
+        const val USER_TOKEN="USER_TOKEN"
+
         val DEGREE_MAP = mapOf(
             "B.Tech Information Technology" to "100",
             "B.Tech Computer Science" to "200",
