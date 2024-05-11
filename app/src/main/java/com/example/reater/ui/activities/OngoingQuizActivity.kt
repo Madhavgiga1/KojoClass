@@ -6,6 +6,8 @@ import android.os.CountDownTimer
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.reater.adapters.QuestionIndexAdapter
 import com.example.reater.databinding.ActivityOngoingQuizBinding
 import com.example.reater.models.Quiz
 
@@ -16,6 +18,7 @@ class OngoingQuizActivity : AppCompatActivity() {
     private val args:OngoingQuizActivityArgs by navArgs()
     private var currentQuestionIndex = 0
     private lateinit var timer: CountDownTimer
+    private val qadapter by lazy {QuestionIndexAdapter()}
     private var backButtonPressed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,9 +27,17 @@ class OngoingQuizActivity : AppCompatActivity() {
         setContentView(binding.root)
 
          quiz = args.quiz
+        //qadapter.questionCount=quiz.quizList.size
+        binding.question=quiz.quizList[0]
+        setupUi()
 
+    }
+
+    private fun setupUi() {
+        binding.qnoRV.adapter=qadapter
+        binding.qnoRV.layoutManager=LinearLayoutManager(this)
         binding.progressBar3.max=quiz.quizDuration.toInt()*60000
-       binding.previousQuestion.setOnClickListener {
+        binding.previousQuestion.setOnClickListener {
             if (currentQuestionIndex == 0) {
                 Toast.makeText(this, "This is the first question only", Toast.LENGTH_SHORT).show()
             } else {
@@ -43,6 +54,8 @@ class OngoingQuizActivity : AppCompatActivity() {
                 binding.question = quiz.quizList[currentQuestionIndex]
             }
         }
+
+
 
         startTimer()
     }

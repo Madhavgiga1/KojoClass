@@ -10,8 +10,10 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.BindingAdapter
 import androidx.navigation.findNavController
 import coil.load
+import com.example.reater.databinding.ActivityOngoingQuizBinding
 import com.example.reater.models.Assignment
 import com.example.reater.models.Coursework
+import com.example.reater.models.Question
 import com.example.reater.models.Quiz
 import com.example.reater.ui.activities.MainActivity
 import com.example.reater.ui.activities.OngoingQuizActivity
@@ -80,6 +82,21 @@ class RowBinding {
 
                 } catch (e:Exception){
                     Toast.makeText(quizRowLayout.context,e.toString(),Toast.LENGTH_SHORT).show()
+                    Log.d("ayooo",e.toString())
+                    //getting this error cause you only made the quiz class parcelable
+                }
+            }
+        }
+
+        @BindingAdapter("onQuizIndexListener")
+        @JvmStatic
+        fun onQuizIndexListener(questionIndex: ConstraintLayout, questionNumber: Question,activityBinding:ActivityOngoingQuizBinding){
+            questionIndex.setOnClickListener{
+                try {
+                    activityBinding.question=questionNumber
+                }
+                catch (e:Exception){
+                    Toast.makeText(questionIndex.context,e.toString(),Toast.LENGTH_SHORT).show()
                     Log.d("ayooo",e.toString())
                     //getting this error cause you only made the quiz class parcelable
                 }

@@ -25,4 +25,21 @@ class RemoteDataSource @Inject constructor(private val kojoStudentAPI: KojoStude
     suspend fun LoginTeacher(loginRequest: LoginRequest): Response<TeacherLoginResponse>{
         return userApi.TeacherLoginRequest(loginRequest)
     }
+
+    suspend fun submitStudentQuiz(quizResult: QuizResult): Response<Unit>{
+        return kojoStudentAPI.submitStudentQuiz(quizResult)
+    }
+
+    suspend fun getQuizzes(queries: Map<String, String>): Response<List<Quiz>> {
+        return kojoStudentAPI.getQuizzes(queries)
+    }
+
+    suspend fun getAssignments(queries: Map<String, String>): Response<List<Assignment>> {
+        return kojoStudentAPI.getAssignments(queries)
+    }
+
+    suspend fun turninAssignment(assignmentUpload: AssignmentUpload): Response<Unit> {
+        return kojoStudentAPI.turninAssignment(assignmentUpload)
+    }
+
 }

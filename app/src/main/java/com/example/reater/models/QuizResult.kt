@@ -22,6 +22,10 @@ data class QuizResult(
     @SerializedName("ObtainedMarks")
     var obtainedmarks:Int,
 
+    @SerializedName("CorrectlyAnsweredQuestionCount")
+    var correctlyansweredquestioncount:Int,
+
+
     @SerializedName("MaxMarks")
     var MaxMarks:Int,
 
