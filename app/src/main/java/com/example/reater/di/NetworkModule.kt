@@ -2,6 +2,7 @@ package com.example.reater.di
 
 import com.example.reater.data.network.KojoStudentApi
 import com.example.reater.data.network.UserApi
+import com.example.reater.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,7 +39,7 @@ object NetworkModule {
         gsonConverterFactory: GsonConverterFactory
     ):Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://www.youtube.com/")
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(gsonConverterFactory).build()
     }

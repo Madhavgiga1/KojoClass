@@ -41,7 +41,7 @@ class AssignmentAdapter: RecyclerView.Adapter<AssignmentAdapter.MyViewHolder>() 
         return assignments.size
     }
 
-    fun setData(newData: List<Assignment>){
+    fun setData(newData: ArrayList<Assignment>){
         val announcementsDiffUtil =
             GenericDiffUtil(assignments, newData)
         val diffUtilResult = DiffUtil.calculateDiff(announcementsDiffUtil)

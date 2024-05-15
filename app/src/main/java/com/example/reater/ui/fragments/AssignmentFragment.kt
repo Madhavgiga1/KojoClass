@@ -55,7 +55,7 @@ class AssignmentFragment : Fragment() {
             )
 
         )
-        mAdapter.setData(assignments)
+        mAdapter.setData(assignments as ArrayList<Assignment>)
         return binding.root
     }
 

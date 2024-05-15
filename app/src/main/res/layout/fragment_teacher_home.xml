@@ -88,6 +88,8 @@
         app:layout_constraintTop_toBottomOf="@+id/materialCardView3" />
 
     <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/TeacherHomeRV"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"

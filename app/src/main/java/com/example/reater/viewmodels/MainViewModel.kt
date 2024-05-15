@@ -92,7 +92,7 @@ class MainViewModel @Inject constructor(private val repository: Repository, appl
     fun postStudentQuiz(quizResult: QuizResult)=viewModelScope.launch{
         submitQuiz(quizResult)
     }
-    suspend fun submitQuiz(quizResult:QuizResult){
+    private suspend fun submitQuiz(quizResult:QuizResult){
         if(hasInternetConnection()){
             var response=repository.remote.submitStudentQuiz(quizResult)
             if(response.isSuccessful){

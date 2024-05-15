@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_teacherClassDetailsFragment_to_teacherAnnouncementsFragment"
             app:destination="@id/teacherAnnouncementsFragment" />
+        <argument
+            android:name="course"
+            app:argType="com.example.reater.models.Coursework" />
     </fragment>
     <fragment
         android:id="@+id/teacherHomeFragment"
@@ -49,11 +52,6 @@
             app:destination="@id/assignmentUploadFragment" />
     </fragment>
     <fragment
-        android:id="@+id/teacherPostFragment"
-        android:name="com.example.reater.teacherapp.fragments.TeacherPostFragment"
-        android:label="fragment_teacher_post"
-        tools:layout="@layout/fragment_teacher_post" />
-    <fragment
         android:id="@+id/teacherQuizFragment"
         android:name="com.example.reater.teacherapp.fragments.TeacherQuiz.TeacherQuizFragment"
         android:label="fragment_teacher_quiz"
@@ -65,12 +63,12 @@
         tools:layout="@layout/fragment_teacher_participants" />
     <fragment
         android:id="@+id/addStudyMaterialFragment"
-        android:name="com.example.reater.teacherapp.fragments.AddStudyMaterialFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherStudyMaterial.AddStudyMaterialFragment"
         android:label="fragment_add_study_material"
         tools:layout="@layout/fragment_add_study_material" />
     <fragment
         android:id="@+id/studyMaterialsFragment"
-        android:name="com.example.reater.teacherapp.fragments.StudyMaterialsFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherStudyMaterial.StudyMaterialsFragment"
         android:label="fragment_study_materials"
         tools:layout="@layout/fragment_study_materials" >
         <action
@@ -79,12 +77,29 @@
     </fragment>
     <fragment
         android:id="@+id/teacherAnnouncementsFragment"
-        android:name="com.example.reater.teacherapp.fragments.TeacherAnnouncementsFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherAnnouncement.TeacherAnnouncementsFragment"
         android:label="fragment_teacher_announcements"
         tools:layout="@layout/fragment_teacher_announcements" >
         <action
             android:id="@+id/action_teacherAnnouncementsFragment_to_teacherPostFragment"
             app:destination="@id/teacherPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherPostFragment"
+        android:name="com.example.reater.teacherapp.fragments.TeacherAnnouncement.TeacherPostFragment"
+        android:label="fragment_teacher_post"
+        tools:layout="@layout/fragment_teacher_post" >
+        <action
+            android:id="@+id/action_teacherPostFragment_to_teacherAnnouncementsFragment"
+            app:destination="@id/teacherAnnouncementsFragment" />
+        <argument
+            android:name="classID"
+            app:argType="string" />
+        <argument android:name="subjectID"
+            app:argType="string" />
+        <argument
+            android:name="subjectName"
+            app:argType="string" />
     </fragment>
 
 </navigation>

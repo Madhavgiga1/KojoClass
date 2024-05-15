@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teacherapp.fragments.AddAnnouncementFragment"/>
+    tools:context=".teacherapp.fragments.TeacherAnnouncement.TeacherAnnouncementsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ta_author_dp"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/house"
+        app:layout_constraintStart_toStartOf="@+id/toolbar4"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+    <TextView
+        android:id="@+id/ta_author_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/ta_author_dp"
+        app:layout_constraintStart_toEndOf="@+id/ta_author_dp"
+        app:layout_constraintTop_toTopOf="@+id/ta_author_dp"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <EditText
+        android:id="@+id/teacher_announcement_text"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="What do you want to talk about?"
+        android:inputType="textMultiLine"
+        android:lines="9"
+        android:maxLines="9"
+        app:layout_constraintBottom_toTopOf="@+id/teacher_announcement_finalsubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ta_author_dp" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/teacher_announcement_finalsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="16dp"
+        android:padding="2dp"
+        app:cardBackgroundColor="@color/teal_700"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/Cream"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="62dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/email">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="start|center"
+
+            android:padding="5dp"
+            android:text="Upload Material"
+            android:textColor="@color/Cream"
+            android:textSize="20sp"
+            app:fontFamily="@font/mazzardextrabold">
+
+        </TextView>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

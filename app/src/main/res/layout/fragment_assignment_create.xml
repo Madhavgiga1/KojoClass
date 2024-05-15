@@ -117,8 +117,9 @@
             android:hint="Enter Assignment Instructions"
             android:inputType="textMultiLine"
             android:minLines="3"
-            android:padding="8dp"
             android:text="@={newAssignment.instructions}"
+            android:padding="8dp"
+
             android:textColor="@color/ShadeofDark"
             android:textSize="16sp"
             app:fontFamily="@font/mazzardbold"
@@ -257,6 +258,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/submit_create_assignment_box"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"

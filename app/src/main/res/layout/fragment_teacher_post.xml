@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".teacherapp.fragments.TeacherPostFragment">
+    tools:context=".teacherapp.fragments.TeacherAnnouncement.TeacherPostFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view_header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:cardBackgroundColor="@color/mixred"
+        app:cardBackgroundColor="@color/BalticSeabgcolor"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -317,7 +317,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/teacher_announcement_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"

@@ -5,25 +5,24 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.reater.databinding.ClassesRowLayoutBinding
+import com.example.reater.databinding.TeacherClassrowlayoutBinding
 import com.example.reater.models.Coursework
 import com.example.reater.utils.GenericDiffUtil
 
+class TeacherHomeClassAdapter: RecyclerView.Adapter<TeacherHomeClassAdapter.MyViewHolder>() {
+    var classlist = emptyList<Coursework>()
 
-//what is this we used after RecyclerView.Adapter<>
-
-//in MyViewholder is this primary construcor
-
-class ClassAdapter: RecyclerView.Adapter<ClassAdapter.MyViewHolder>() {
-    var classlist=emptyList<Coursework>()
-    class MyViewHolder(private val binding: ClassesRowLayoutBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(course: Coursework){
-            binding.individualCourse=course
+    class MyViewHolder(private val binding: TeacherClassrowlayoutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(course: Coursework) {
+            binding.classdetails=course
 
         }
-        companion object{
-            fun from(parent: ViewGroup):MyViewHolder{
-                var layoutInflater=LayoutInflater.from(parent.context)
-                var binding=ClassesRowLayoutBinding.inflate(layoutInflater,parent,false)
+
+        companion object {
+            fun from(parent: ViewGroup): MyViewHolder {
+                var layoutInflater = LayoutInflater.from(parent.context)
+                var binding = TeacherClassrowlayoutBinding.inflate(layoutInflater, parent, false)
                 return MyViewHolder(binding)
             }
         }
@@ -34,15 +33,15 @@ class ClassAdapter: RecyclerView.Adapter<ClassAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        var currentcourse=classlist[position]
-        holder.bind(currentcourse)
+        var currentclass = classlist[position]
+        holder.bind(currentclass)
     }
 
     override fun getItemCount(): Int {
         return classlist.size
     }
 
-    fun setData(newData: List<Coursework>){
+    fun setData(newData: List<Coursework>) {
         val classDiffUtil =
             GenericDiffUtil(classlist, newData)
         val diffUtilResult = DiffUtil.calculateDiff(classDiffUtil)

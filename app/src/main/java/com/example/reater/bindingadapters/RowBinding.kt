@@ -15,6 +15,7 @@ import com.example.reater.models.Assignment
 import com.example.reater.models.Coursework
 import com.example.reater.models.Question
 import com.example.reater.models.Quiz
+import com.example.reater.teacherapp.fragments.TeacherHomeFragmentDirections
 import com.example.reater.ui.activities.MainActivity
 import com.example.reater.ui.activities.OngoingQuizActivity
 import com.example.reater.ui.fragments.AssignmentFragmentDirections
@@ -111,7 +112,20 @@ class RowBinding {
                     val action=AssignmentFragmentDirections.actionAssignmentFragmentToAssignmentDetailsFragment(assignment)
                     assignmentRowLayout.findNavController().navigate(action)
                 } catch (e:Exception){
-                    Log.d("onRecipeClickListener",e.toString())
+                    Log.d("onAssignmentClickListener",e.toString())
+                }
+            }
+        }
+
+        @BindingAdapter("onTeacherClassClickListener")
+        @JvmStatic
+        fun onTeacherClassClickListener(tcClassRowLayout: ConstraintLayout, coursework: Coursework){
+            tcClassRowLayout.setOnClickListener{
+                try {
+                    val action=TeacherHomeFragmentDirections.actionTeacherHomeFragmentToTeacherClassDetailsFragment(coursework)
+                    tcClassRowLayout.findNavController().navigate(action)
+                } catch (e:Exception){
+                    Log.d("tcClassRowClickListener",e.toString())
                 }
             }
         }

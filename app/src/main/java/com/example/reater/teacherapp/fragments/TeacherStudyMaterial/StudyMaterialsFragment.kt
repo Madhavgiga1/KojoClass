@@ -1,4 +1,4 @@
-package com.example.reater.teacherapp.fragments
+package com.example.reater.teacherapp.fragments.TeacherStudyMaterial
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.reater.R
 
-class AddAnnouncementFragment : Fragment() {
+
+class StudyMaterialsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
 
-        }
     }
 
     override fun onCreateView(
@@ -21,8 +20,7 @@ class AddAnnouncementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_announcement, container, false)
+        return inflater.inflate(R.layout.fragment_study_materials, container, false)
     }
-
 
 }
