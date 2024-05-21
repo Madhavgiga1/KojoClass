@@ -1,0 +1,5 @@
+![firstkojo](https://github.com/Madhavgiga1/KojoClass/assets/77728555/2ab61a1a-8a15-4919-bdd7-69e0a3ce5ed1)
+![stufirstkojo](https://github.com/Madhavgiga1/KojoClass/assets/77728555/036e16f6-cda4-42d9-bf7b-5b8891b99b2c)
+![stu2kojo](https://github.com/Madhavgiga1/KojoClass/assets/77728555/a98c6f1b-e7ba-4cad-ad11-eddebfee5760)
+![secondteachkojo](https://github.com/Madhavgiga1/KojoClass/assets/77728555/6853f34f-36a2-4e40-bfa5-a361812015e8)
+![teach2kojo](https://github.com/Madhavgiga1/KojoClass/assets/77728555/23690bfc-bd70-4f3d-ac38-e7ae800d2972)
